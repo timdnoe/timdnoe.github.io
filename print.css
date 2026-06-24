@@ -1,0 +1,110 @@
+/* ============================================================
+   print.css — governs the PDF (assets/CV.pdf) and browser printing.
+   Self-contained: styles.css is screen-only, so the PDF is styled
+   entirely from here. Edit cv.yml for content; tweak here for look.
+   ============================================================ */
+
+@page {
+  size: Letter;            /* change to A4 if you prefer */
+  margin: 0.7in 0.8in;
+  @bottom-right {
+    content: counter(page) " / " counter(pages);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 8pt;
+    color: #888;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  color: #111;
+  background: #fff;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 10.5pt;
+  line-height: 1.4;
+}
+
+a { color: #1a3a5a; text-decoration: none; }
+
+/* ---- hide the website chrome that has no place in a PDF ---- */
+.site-header,
+.nav__toggle,
+.screen-only,
+.hero__photo { display: none !important; }
+
+.container { width: 100%; max-width: none; padding: 0; margin: 0; }
+
+/* ----------------------------- header ----------------------------- */
+.hero { padding: 0 0 6pt; border-bottom: 1.5pt solid #333; margin-bottom: 10pt; }
+.hero__inner { display: block; }
+.hero__name { font-size: 22pt; margin: 0 0 2pt; letter-spacing: 0.2pt; }
+.hero__role { font-size: 11.5pt; font-weight: bold; margin: 0 0 1pt; color: #222; }
+.hero__affil { margin: 0 0 3pt; color: #333; }
+.hero__tagline { margin: 0 0 5pt; color: #444; font-style: italic; }
+
+/* contact line: render the link "buttons" as plain inline text */
+.hero__links { display: block; font-size: 9.5pt; color: #333; }
+.hero__links .btn {
+  display: inline;
+  border: 0;
+  padding: 0;
+  background: none;
+  color: #1a3a5a;
+  white-space: nowrap;
+}
+.hero__links .contact-link + .contact-link::before { content: "  ·  "; color: #999; }
+
+/* ---------------------------- sections ---------------------------- */
+.section { padding: 0; margin: 0 0 11pt; }
+.section--alt { background: none; border: 0; }
+.section__title {
+  font-size: 12pt;
+  font-variant: small-caps;
+  letter-spacing: 0.5pt;
+  font-weight: bold;
+  margin: 0 0 5pt;
+  padding: 0 0 2pt;
+  border-bottom: 0.75pt solid #bbb;
+  page-break-after: avoid;
+}
+.subhead {
+  font-size: 10.5pt;
+  font-weight: bold;
+  margin: 7pt 0 3pt;
+  page-break-after: avoid;
+}
+p { margin: 0 0 4pt; }
+.muted { color: #666; }
+
+/* research-interest tags become a comma-free inline run */
+.tags { list-style: none; padding: 0; margin: 0 0 5pt; }
+.tags .tag {
+  display: inline;
+  border: 0;
+  padding: 0;
+  background: none;
+  font-size: 10.5pt;
+}
+.tags .tag + .tag::before { content: " · "; color: #999; }
+
+/* publications */
+.pub-list { padding-left: 16pt; margin: 0; }
+.pub { margin: 0 0 6pt; page-break-inside: avoid; }
+.pub__title { font-weight: bold; margin: 0; }
+.pub__meta { margin: 0; color: #333; }
+.pub__links { margin: 0; font-size: 8.5pt; }
+
+/* timelines (education / appointments) */
+.timeline, .plain { list-style: none; padding: 0; margin: 0; }
+.timeline__item { display: flex; gap: 12pt; padding: 2pt 0; page-break-inside: avoid; }
+.timeline__date { flex: 0 0 88pt; color: #555; font-size: 9.5pt; }
+.timeline__head { font-weight: bold; margin: 0; }
+.timeline__sub { color: #333; margin: 0; }
+.plain li { padding: 1.5pt 0; page-break-inside: avoid; }
+
+/* footer: keep only the copyright line, drop nav/testament link */
+.site-footer { border-top: 0.5pt solid #ccc; margin-top: 10pt; padding-top: 4pt; }
+.site-footer__inner { display: block; }
+.site-footer p { font-size: 8.5pt; color: #777; margin: 0; }

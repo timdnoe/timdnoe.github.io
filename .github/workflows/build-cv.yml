@@ -1,0 +1,61 @@
+name: Build CV
+
+# Regenerate index.html and assets/CV.pdf from cv.yml whenever the content
+# or templates change, and commit the results back to main.
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'cv.yml'
+      - 'build.py'
+      - 'templates/**'
+      - 'print.css'
+      - 'styles.css'
+      - 'requirements.txt'
+      - '.github/workflows/build-cv.yml'
+  workflow_dispatch:
+
+# The generated files (index.html, assets/CV.pdf) are NOT in the paths filter
+# above, so the commit this job pushes will not re-trigger the workflow.
+permissions:
+  contents: write
+
+concurrency:
+  group: build-cv
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+
+      - name: Install WeasyPrint system libraries
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            libpango-1.0-0 libpangoft2-1.0-0 libharfbuzz0b \
+            fonts-liberation fonts-dejavu-core
+
+      - name: Install Python dependencies
+        run: pip install -r requirements.txt
+
+      - name: Build index.html and assets/CV.pdf
+        run: python build.py
+
+      - name: Commit regenerated outputs
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add index.html assets/CV.pdf
+          if git diff --cached --quiet; then
+            echo "Nothing to commit — outputs already up to date."
+          else
+            git commit -m "build: regenerate index.html and CV.pdf [skip ci]"
+            git push origin HEAD:main
+          fi

@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Timothy Noe</title>
   <meta name="description" content="Academic homepage and curriculum vitae of Timothy Noe.">
-  <!-- Open Graph / social preview -->
   <meta property="og:title" content="Timothy Noe">
   <meta property="og:description" content="Academic homepage and curriculum vitae of Timothy Noe.">
   <meta property="og:type" content="website">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css" media="screen">
+  <link rel="stylesheet" href="print.css" media="print">
 </head>
 <body>
   <header class="site-header">
@@ -20,11 +20,7 @@
       </button>
       <ul class="nav__menu" id="nav-menu">
         <li><a href="#about">About</a></li>
-        <li><a href="#research">Research</a></li>
-        <li><a href="#publications">Publications</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#teaching">Teaching</a></li>
-        <li><a href="#contact">Contact</a></li>
+<li><a href="#research">Research</a></li><li><a href="#publications">Publications</a></li><li><a href="#experience">Experience</a></li><li><a href="#teaching">Teaching</a></li>        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
@@ -33,25 +29,12 @@
     <!-- ============================== HERO ============================== -->
     <section class="hero">
       <div class="container hero__inner">
-        <!-- Optional headshot: drop an image at assets/headshot.jpg and uncomment.
-        <img class="hero__photo" src="assets/headshot.jpg" alt="Portrait of Timothy Noe">
-        -->
         <div class="hero__text">
           <h1 class="hero__name">Timothy Noe</h1>
-          <p class="hero__role"><!-- TODO: e.g. Ph.D. Candidate in Linguistics --> Your Title / Role</p>
-          <p class="hero__affil"><!-- TODO: Department, University --> Department &middot; University</p>
-          <p class="hero__tagline"><!-- TODO: one-line research summary -->
-            A short, plain-language summary of what you study and why it matters.
-          </p>
-          <div class="hero__links">
-            <a class="btn btn--primary" href="assets/CV.pdf"><!-- TODO: add assets/CV.pdf -->Download CV (PDF)</a>
-            <a class="btn" href="mailto:tim.d.noe@gmail.com">Email</a>
-            <!-- Replace href values, then remove hidden attribute to show a link -->
-            <a class="btn" href="#" hidden>Google&nbsp;Scholar</a>
-            <a class="btn" href="#" hidden>ORCID</a>
-            <a class="btn" href="#" hidden>GitHub</a>
-            <a class="btn" href="#" hidden>LinkedIn</a>
-          </div>
+<p class="hero__role">Your Title / Role</p><p class="hero__affil">Department · University &middot; City, Country</p><p class="hero__tagline">A short, plain-language summary of what you study and why it matters.
+</p>          <div class="hero__links">
+            <a class="btn btn--primary screen-only" href="assets/CV.pdf">Download CV (PDF)</a>
+<a class="btn contact-link" href="mailto:tim.d.noe@gmail.com">tim.d.noe@gmail.com</a><a class="btn contact-link" href="https://github.com/timdnoe">GitHub</a>          </div>
         </div>
       </div>
     </section>
@@ -60,13 +43,8 @@
     <section id="about" class="section">
       <div class="container">
         <h2 class="section__title">About</h2>
-        <p>
-          <!-- TODO: 2–4 sentence bio. Who you are, your field, your guiding research
-          questions, and current affiliation. Write in first or third person — your call. -->
-          I am a researcher working on <em>[your field]</em>. My work focuses on
-          <em>[core question / theme]</em>, drawing on <em>[methods / traditions]</em>.
-          Before joining <em>[current institution]</em>, I <em>[brief prior background]</em>.
-        </p>
+        <p>I am a researcher working on [your field]. My work focuses on [core question / theme], drawing on [methods / traditions]. Before joining [current institution], I [brief prior background].
+</p>
       </div>
     </section>
 
@@ -75,40 +53,24 @@
       <div class="container">
         <h2 class="section__title">Research Interests</h2>
         <ul class="tags">
-          <!-- TODO: replace with your areas -->
-          <li class="tag">Interest one</li>
-          <li class="tag">Interest two</li>
-          <li class="tag">Interest three</li>
-          <li class="tag">Interest four</li>
-        </ul>
-        <div class="prose">
-          <p>
-            <!-- TODO: optional 1–2 paragraph overview of your research program. -->
-            A short narrative describing the through-line of your research: the problems
-            you care about, your approach, and where you see the work heading.
-          </p>
-        </div>
-      </div>
+<li class="tag">Interest one</li><li class="tag">Interest two</li><li class="tag">Interest three</li><li class="tag">Interest four</li>        </ul>
+<div class="prose"><p>A short narrative describing the through-line of your research: the problems you care about, your approach, and where the work is heading.
+</p></div>      </div>
     </section>
 
     <!-- ========================= PUBLICATIONS =========================== -->
     <section id="publications" class="section">
       <div class="container">
         <h2 class="section__title">Publications</h2>
-        <p class="muted">Selected work. <!-- TODO: † indicates equal contribution, etc. --></p>
         <ol class="pub-list">
-          <!-- TODO: duplicate an <li> per paper -->
           <li class="pub">
             <p class="pub__title">Title of the paper or chapter.</p>
-            <p class="pub__meta">Author A, <strong>Noe, T.</strong>, &amp; Author B (Year).
-              <em>Venue / Journal</em>, vol(issue), pages.</p>
-            <p class="pub__links">
-              <a href="#">PDF</a> &middot; <a href="#">DOI</a> &middot; <a href="#">BibTeX</a>
-            </p>
+            <p class="pub__meta">Author A, <strong>Noe, T.</strong>, &amp; Author B (Year). <em>Venue / Journal, vol(issue), pages.</em></p>
+            <p class="pub__links"><a href="#">PDF</a> &middot; <a href="#">DOI</a> &middot; <a href="#">BibTeX</a></p>
           </li>
           <li class="pub">
             <p class="pub__title">Another representative publication.</p>
-            <p class="pub__meta"><strong>Noe, T.</strong> (Year). <em>Venue / Journal</em>.</p>
+            <p class="pub__meta"><strong>Noe, T.</strong> (Year). <em>Venue / Journal.</em></p>
             <p class="pub__links"><a href="#">PDF</a></p>
           </li>
         </ol>
@@ -122,11 +84,10 @@
 
         <h3 class="subhead">Education</h3>
         <ul class="timeline">
-          <!-- TODO -->
           <li class="timeline__item">
             <span class="timeline__date">Year–Year</span>
             <div>
-              <p class="timeline__head">Degree, Field</p>
+              <p class="timeline__head">Ph.D., Field</p>
               <p class="timeline__sub">Institution</p>
             </div>
           </li>
@@ -134,7 +95,6 @@
 
         <h3 class="subhead">Appointments</h3>
         <ul class="timeline">
-          <!-- TODO -->
           <li class="timeline__item">
             <span class="timeline__date">Year–Present</span>
             <div>
@@ -146,9 +106,7 @@
 
         <h3 class="subhead">Awards &amp; Grants</h3>
         <ul class="plain">
-          <!-- TODO -->
-          <li><span class="muted">Year</span> — Award or grant name, funder.</li>
-        </ul>
+<li><span class="muted">Year</span> — Award or grant name, funder.</li>        </ul>
       </div>
     </section>
 
@@ -158,14 +116,10 @@
         <h2 class="section__title">Teaching &amp; Service</h2>
         <h3 class="subhead">Teaching</h3>
         <ul class="plain">
-          <!-- TODO -->
-          <li><span class="muted">Term Year</span> — Course title, role (Institution).</li>
-        </ul>
+<li><span class="muted">Term Year</span> — Course title, role (Institution).</li>        </ul>
         <h3 class="subhead">Service</h3>
         <ul class="plain">
-          <!-- TODO -->
-          <li>Reviewer, <em>Journal / Conference</em>.</li>
-        </ul>
+<li>Reviewer, Journal / Conference.</li>        </ul>
       </div>
     </section>
 
@@ -173,11 +127,8 @@
     <section id="contact" class="section section--alt">
       <div class="container">
         <h2 class="section__title">Contact</h2>
-        <p>
-          The best way to reach me is by email:
-          <a href="mailto:tim.d.noe@gmail.com">tim.d.noe@gmail.com</a>.
-          <!-- TODO: add office address / institutional email if desired. -->
-        </p>
+        <p>The best way to reach me is by email:
+          <a href="mailto:tim.d.noe@gmail.com">tim.d.noe@gmail.com</a>.</p>
       </div>
     </section>
   </main>
@@ -185,16 +136,12 @@
   <footer class="site-footer">
     <div class="container site-footer__inner">
       <p>&copy; <span id="year">2026</span> Timothy Noe.</p>
-      <p class="muted">
-        Also here: <a href="index4.9.html">The Present Testament</a>.
-      </p>
+      <p class="muted screen-only">Also here: <a href="index4.9.html">The Present Testament</a>.</p>
     </div>
   </footer>
 
   <script>
-    // Footer year
     document.getElementById('year').textContent = new Date().getFullYear();
-    // Mobile nav toggle
     (function () {
       var toggle = document.querySelector('.nav__toggle');
       var menu = document.getElementById('nav-menu');

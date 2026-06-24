@@ -1,0 +1,86 @@
+# =============================================================================
+# cv.yml — SINGLE SOURCE OF TRUTH for Timothy Noe's CV.
+#
+# Edit ONLY this file. On push, CI regenerates:
+#   - index.html      (the website)
+#   - assets/CV.pdf   (the downloadable / shareable PDF)
+#
+# Tips:
+#   - Wrap your own name in **double asterisks** to bold it in author lists.
+#   - Delete or duplicate list items freely; empty sections are hidden.
+#   - Long text: use ">" for a folded paragraph (newlines become spaces).
+# =============================================================================
+
+basics:
+  name: Timothy Noe
+  title: Your Title / Role                      # e.g. Ph.D. Candidate in Linguistics
+  affiliation: Department · University
+  location: City, Country                       # optional; remove if unwanted
+  email: tim.d.noe@gmail.com
+  tagline: >
+    A short, plain-language summary of what you study and why it matters.
+  summary: >
+    I am a researcher working on [your field]. My work focuses on
+    [core question / theme], drawing on [methods / traditions]. Before
+    joining [current institution], I [brief prior background].
+  # photo: assets/headshot.jpg                  # optional; uncomment to show on the website
+
+# Profile links. Leave url empty ("") to hide a link.
+links:
+  - label: Google Scholar
+    url: ""
+  - label: ORCID
+    url: ""
+  - label: GitHub
+    url: https://github.com/timdnoe
+  - label: LinkedIn
+    url: ""
+
+research_interests:
+  - Interest one
+  - Interest two
+  - Interest three
+  - Interest four
+
+research_statement: >
+  A short narrative describing the through-line of your research: the
+  problems you care about, your approach, and where the work is heading.
+
+education:
+  - period: "Year–Year"
+    what: "Ph.D., Field"
+    where: "Institution"
+    note: ""                                    # optional: advisor, thesis title
+
+appointments:
+  - period: "Year–Present"
+    what: "Position"
+    where: "Institution"
+    note: ""
+
+publications:
+  - title: "Title of the paper or chapter."
+    authors: "Author A, **Noe, T.**, & Author B"
+    year: "Year"
+    venue: "Venue / Journal, vol(issue), pages."
+    links:
+      - { label: PDF, url: "#" }
+      - { label: DOI, url: "#" }
+      - { label: BibTeX, url: "#" }
+  - title: "Another representative publication."
+    authors: "**Noe, T.**"
+    year: "Year"
+    venue: "Venue / Journal."
+    links:
+      - { label: PDF, url: "#" }
+
+awards:
+  - year: "Year"
+    what: "Award or grant name, funder."
+
+teaching:
+  - when: "Term Year"
+    what: "Course title, role (Institution)."
+
+service:
+  - "Reviewer, Journal / Conference."

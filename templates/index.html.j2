@@ -1,0 +1,200 @@
+{#- Generated into index.html by build.py. Do not edit index.html directly; edit cv.yml. -#}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ basics.name }}</title>
+  <meta name="description" content="Academic homepage and curriculum vitae of {{ basics.name }}.">
+  <meta property="og:title" content="{{ basics.name }}">
+  <meta property="og:description" content="Academic homepage and curriculum vitae of {{ basics.name }}.">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="styles.css" media="screen">
+  <link rel="stylesheet" href="print.css" media="print">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav" aria-label="Primary">
+      <a class="nav__brand" href="#top">{{ basics.name | replace(" ", "&nbsp;") | safe }}</a>
+      <button class="nav__toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__menu" id="nav-menu">
+        <li><a href="#about">About</a></li>
+        {% if research_interests or research_statement %}<li><a href="#research">Research</a></li>{% endif %}
+        {% if publications %}<li><a href="#publications">Publications</a></li>{% endif %}
+        {% if education or appointments or awards %}<li><a href="#experience">Experience</a></li>{% endif %}
+        {% if teaching or service %}<li><a href="#teaching">Teaching</a></li>{% endif %}
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="top">
+    <!-- ============================== HERO ============================== -->
+    <section class="hero">
+      <div class="container hero__inner">
+        {% if basics.photo %}<img class="hero__photo" src="{{ basics.photo }}" alt="Portrait of {{ basics.name }}">{% endif %}
+        <div class="hero__text">
+          <h1 class="hero__name">{{ basics.name }}</h1>
+          {% if basics.title %}<p class="hero__role">{{ basics.title }}</p>{% endif %}
+          {% if basics.affiliation %}<p class="hero__affil">{{ basics.affiliation }}{% if basics.location %} &middot; {{ basics.location }}{% endif %}</p>{% endif %}
+          {% if basics.tagline %}<p class="hero__tagline">{{ basics.tagline }}</p>{% endif %}
+          <div class="hero__links">
+            <a class="btn btn--primary screen-only" href="assets/CV.pdf">Download CV (PDF)</a>
+            {% if basics.email %}<a class="btn contact-link" href="mailto:{{ basics.email }}">{{ basics.email }}</a>{% endif %}
+            {% for link in links if link.url %}<a class="btn contact-link" href="{{ link.url }}">{{ link.label }}</a>{% endfor %}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== ABOUT ============================== -->
+    {% if basics.summary %}
+    <section id="about" class="section">
+      <div class="container">
+        <h2 class="section__title">About</h2>
+        <p>{{ basics.summary }}</p>
+      </div>
+    </section>
+    {% endif %}
+
+    <!-- ========================== RESEARCH ============================== -->
+    {% if research_interests or research_statement %}
+    <section id="research" class="section section--alt">
+      <div class="container">
+        <h2 class="section__title">Research Interests</h2>
+        {% if research_interests %}
+        <ul class="tags">
+          {% for item in research_interests %}<li class="tag">{{ item }}</li>{% endfor %}
+        </ul>
+        {% endif %}
+        {% if research_statement %}<div class="prose"><p>{{ research_statement }}</p></div>{% endif %}
+      </div>
+    </section>
+    {% endif %}
+
+    <!-- ========================= PUBLICATIONS =========================== -->
+    {% if publications %}
+    <section id="publications" class="section">
+      <div class="container">
+        <h2 class="section__title">Publications</h2>
+        <ol class="pub-list">
+          {% for pub in publications %}
+          <li class="pub">
+            <p class="pub__title">{{ pub.title }}</p>
+            <p class="pub__meta">{{ pub.authors | mdbold }}{% if pub.year %} ({{ pub.year }}){% endif %}.{% if pub.venue %} <em>{{ pub.venue }}</em>{% endif %}</p>
+            {% if pub.links %}
+            <p class="pub__links">{% for l in pub.links %}<a href="{{ l.url }}">{{ l.label }}</a>{% if not loop.last %} &middot; {% endif %}{% endfor %}</p>
+            {% endif %}
+          </li>
+          {% endfor %}
+        </ol>
+      </div>
+    </section>
+    {% endif %}
+
+    <!-- ========================== EXPERIENCE ============================ -->
+    {% if education or appointments or awards %}
+    <section id="experience" class="section section--alt">
+      <div class="container">
+        <h2 class="section__title">Education &amp; Experience</h2>
+
+        {% if education %}
+        <h3 class="subhead">Education</h3>
+        <ul class="timeline">
+          {% for e in education %}
+          <li class="timeline__item">
+            <span class="timeline__date">{{ e.period }}</span>
+            <div>
+              <p class="timeline__head">{{ e.what }}</p>
+              <p class="timeline__sub">{{ e.where }}{% if e.note %} &middot; {{ e.note }}{% endif %}</p>
+            </div>
+          </li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+
+        {% if appointments %}
+        <h3 class="subhead">Appointments</h3>
+        <ul class="timeline">
+          {% for a in appointments %}
+          <li class="timeline__item">
+            <span class="timeline__date">{{ a.period }}</span>
+            <div>
+              <p class="timeline__head">{{ a.what }}</p>
+              <p class="timeline__sub">{{ a.where }}{% if a.note %} &middot; {{ a.note }}{% endif %}</p>
+            </div>
+          </li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+
+        {% if awards %}
+        <h3 class="subhead">Awards &amp; Grants</h3>
+        <ul class="plain">
+          {% for aw in awards %}<li><span class="muted">{{ aw.year }}</span> — {{ aw.what }}</li>{% endfor %}
+        </ul>
+        {% endif %}
+      </div>
+    </section>
+    {% endif %}
+
+    <!-- =========================== TEACHING ============================= -->
+    {% if teaching or service %}
+    <section id="teaching" class="section">
+      <div class="container">
+        <h2 class="section__title">Teaching &amp; Service</h2>
+        {% if teaching %}
+        <h3 class="subhead">Teaching</h3>
+        <ul class="plain">
+          {% for t in teaching %}<li><span class="muted">{{ t.when }}</span> — {{ t.what }}</li>{% endfor %}
+        </ul>
+        {% endif %}
+        {% if service %}
+        <h3 class="subhead">Service</h3>
+        <ul class="plain">
+          {% for s in service %}<li>{{ s | mdbold }}</li>{% endfor %}
+        </ul>
+        {% endif %}
+      </div>
+    </section>
+    {% endif %}
+
+    <!-- ============================ CONTACT ============================= -->
+    <section id="contact" class="section section--alt">
+      <div class="container">
+        <h2 class="section__title">Contact</h2>
+        <p>The best way to reach me is by email:
+          <a href="mailto:{{ basics.email }}">{{ basics.email }}</a>.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <p>&copy; <span id="year">{{ year }}</span> {{ basics.name }}.</p>
+      <p class="muted screen-only">Also here: <a href="index4.9.html">The Present Testament</a>.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    (function () {
+      var toggle = document.querySelector('.nav__toggle');
+      var menu = document.getElementById('nav-menu');
+      if (!toggle) return;
+      toggle.addEventListener('click', function () {
+        var open = menu.classList.toggle('is-open');
+        toggle.setAttribute('aria-expanded', String(open));
+      });
+      menu.addEventListener('click', function (e) {
+        if (e.target.tagName === 'A') {
+          menu.classList.remove('is-open');
+          toggle.setAttribute('aria-expanded', 'false');
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
