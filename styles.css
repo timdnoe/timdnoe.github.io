@@ -1,0 +1,234 @@
+/* ============================================================
+   Timothy Noe — academic homepage
+   Hand-built, dependency-free. Edit freely.
+   ============================================================ */
+
+:root {
+  --ink: #1a1a1a;
+  --ink-soft: #555;
+  --muted: #888;
+  --bg: #ffffff;
+  --bg-alt: #f6f7f9;
+  --line: #e6e8eb;
+  --accent: #2b5c8a;
+  --accent-dark: #1f4567;
+  --maxw: 760px;
+  --radius: 8px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background: var(--bg);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  font-size: 17px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.container {
+  width: 100%;
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ----------------------------- Nav ----------------------------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: saturate(180%) blur(8px);
+  border-bottom: 1px solid var(--line);
+}
+.nav {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav__brand {
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: 0.2px;
+}
+.nav__brand:hover { text-decoration: none; }
+.nav__menu {
+  list-style: none;
+  display: flex;
+  gap: 22px;
+  margin: 0;
+  padding: 0;
+}
+.nav__menu a { color: var(--ink-soft); font-size: 0.95rem; }
+.nav__menu a:hover { color: var(--accent); text-decoration: none; }
+
+.nav__toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  padding: 6px;
+}
+.nav__toggle span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--ink);
+}
+
+/* ----------------------------- Hero ---------------------------- */
+.hero {
+  padding: 64px 0 40px;
+  border-bottom: 1px solid var(--line);
+}
+.hero__inner {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+}
+.hero__photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex: 0 0 auto;
+}
+.hero__name {
+  font-size: 2.2rem;
+  line-height: 1.1;
+  margin: 0 0 6px;
+}
+.hero__role {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--accent);
+  margin: 0 0 2px;
+}
+.hero__affil { color: var(--ink-soft); margin: 0 0 12px; }
+.hero__tagline { margin: 0 0 18px; color: var(--ink-soft); }
+.hero__links { display: flex; flex-wrap: wrap; gap: 10px; }
+
+/* ---------------------------- Buttons -------------------------- */
+.btn {
+  display: inline-block;
+  padding: 7px 14px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  color: var(--ink);
+  font-size: 0.92rem;
+  background: #fff;
+}
+.btn:hover { border-color: var(--accent); color: var(--accent); text-decoration: none; }
+.btn--primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+.btn--primary:hover { background: var(--accent-dark); border-color: var(--accent-dark); color: #fff; }
+
+/* --------------------------- Sections -------------------------- */
+.section { padding: 48px 0; }
+.section--alt { background: var(--bg-alt); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.section__title {
+  font-size: 1.4rem;
+  margin: 0 0 18px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--accent);
+  display: inline-block;
+}
+.subhead {
+  font-size: 1.05rem;
+  margin: 26px 0 10px;
+  color: var(--ink);
+}
+.muted { color: var(--muted); font-size: 0.9rem; }
+.prose p { margin: 0.6em 0; }
+
+/* ----------------------------- Tags ---------------------------- */
+.tags { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; padding: 0; margin: 0 0 18px; }
+.tag {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 4px 12px;
+  font-size: 0.88rem;
+  color: var(--ink-soft);
+}
+
+/* ------------------------- Publications ------------------------ */
+.pub-list { padding-left: 1.2em; margin: 0; }
+.pub { margin: 0 0 18px; }
+.pub__title { font-weight: 600; margin: 0 0 2px; }
+.pub__meta { margin: 0 0 2px; color: var(--ink-soft); font-size: 0.95rem; }
+.pub__links { margin: 0; font-size: 0.88rem; }
+
+/* -------------------------- Timeline --------------------------- */
+.timeline, .plain { list-style: none; padding: 0; margin: 0; }
+.timeline__item {
+  display: flex;
+  gap: 16px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--line);
+}
+.timeline__item:last-child { border-bottom: 0; }
+.timeline__date {
+  flex: 0 0 110px;
+  color: var(--muted);
+  font-size: 0.9rem;
+  padding-top: 2px;
+}
+.timeline__head { font-weight: 600; margin: 0; }
+.timeline__sub { color: var(--ink-soft); margin: 0; font-size: 0.95rem; }
+.plain li { padding: 6px 0; border-bottom: 1px solid var(--line); }
+.plain li:last-child { border-bottom: 0; }
+
+/* ---------------------------- Footer --------------------------- */
+.site-footer {
+  border-top: 1px solid var(--line);
+  padding: 28px 0;
+  margin-top: 10px;
+}
+.site-footer__inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 8px;
+}
+.site-footer p { margin: 0; }
+
+/* -------------------------- Responsive ------------------------- */
+@media (max-width: 620px) {
+  .nav__toggle { display: flex; }
+  .nav__menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 0;
+    background: #fff;
+    border-bottom: 1px solid var(--line);
+    padding: 8px 20px 14px;
+    display: none;
+  }
+  .nav__menu.is-open { display: flex; }
+  .nav__menu li { padding: 8px 0; }
+  .hero__inner { flex-direction: column; text-align: center; align-items: center; }
+  .hero__links { justify-content: center; }
+  .timeline__item { flex-direction: column; gap: 2px; }
+  .timeline__date { flex-basis: auto; }
+}
