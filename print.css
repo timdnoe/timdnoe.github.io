@@ -78,8 +78,8 @@ a { color: #1a3a5a; text-decoration: none; }
 p { margin: 0 0 4pt; }
 .muted { color: #666; }
 
-/* research-interest tags become a comma-free inline run */
-.tags { list-style: none; padding: 0; margin: 0 0 5pt; }
+/* tags become a comma-free inline run */
+.tags { list-style: none; padding: 0; margin: 0; display: inline; }
 .tags .tag {
   display: inline;
   border: 0;
@@ -88,6 +88,17 @@ p { margin: 0 0 4pt; }
   font-size: 10.5pt;
 }
 .tags .tag + .tag::before { content: " · "; color: #999; }
+
+/* project cards become a tight list in print */
+.cards { list-style: none; padding: 0; margin: 0; }
+.card { border: 0; padding: 0; margin: 0 0 5pt; page-break-inside: avoid; }
+.card__title { font-weight: bold; margin: 0; }
+.card__desc { margin: 0; color: #333; }
+
+/* language / skill rows: inline label + values */
+.skillrow { display: block; padding: 1pt 0; page-break-inside: avoid; }
+.skillrow__label { font-weight: bold; }
+.skillrow__label::after { content: ": "; }
 
 /* publications */
 .pub-list { padding-left: 16pt; margin: 0; }

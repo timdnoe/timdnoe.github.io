@@ -169,6 +169,29 @@ a:hover { text-decoration: underline; }
   color: var(--ink-soft);
 }
 
+/* --------------------------- Cards ----------------------------- */
+.print-only { display: none; }
+.cards { list-style: none; padding: 0; margin: 0; display: grid; gap: 14px; }
+@media (min-width: 560px) { .cards { grid-template-columns: 1fr 1fr; } }
+.card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 14px 16px;
+}
+.card__title { font-weight: 600; margin: 0 0 4px; }
+.card__desc { margin: 0; color: var(--ink-soft); font-size: 0.95rem; }
+
+/* ------------------------- Skill rows -------------------------- */
+.skillrow { display: flex; gap: 14px; align-items: baseline; padding: 6px 0; }
+.skillrow__label {
+  flex: 0 0 120px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+}
+.skillrow .tags { margin: 0; }
+
 /* ------------------------- Publications ------------------------ */
 .pub-list { padding-left: 1.2em; margin: 0; }
 .pub { margin: 0 0 18px; }
@@ -231,4 +254,6 @@ a:hover { text-decoration: underline; }
   .hero__links { justify-content: center; }
   .timeline__item { flex-direction: column; gap: 2px; }
   .timeline__date { flex-basis: auto; }
+  .skillrow { flex-direction: column; gap: 4px; }
+  .skillrow__label { flex-basis: auto; }
 }

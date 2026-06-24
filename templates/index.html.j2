@@ -20,11 +20,12 @@
         <span></span><span></span><span></span>
       </button>
       <ul class="nav__menu" id="nav-menu">
-        <li><a href="#about">About</a></li>
-        {% if research_interests or research_statement %}<li><a href="#research">Research</a></li>{% endif %}
-        {% if publications %}<li><a href="#publications">Publications</a></li>{% endif %}
-        {% if education or appointments or awards %}<li><a href="#experience">Experience</a></li>{% endif %}
-        {% if teaching or service %}<li><a href="#teaching">Teaching</a></li>{% endif %}
+        {% if basics.summary %}<li><a href="#about">About</a></li>{% endif %}
+        {% if projects %}<li><a href="#research">Research</a></li>{% endif %}
+        {% if education %}<li><a href="#education">Education</a></li>{% endif %}
+        {% if ventures or employment %}<li><a href="#experience">Experience</a></li>{% endif %}
+        {% if languages or skills %}<li><a href="#skills">Skills</a></li>{% endif %}
+        {% if service %}<li><a href="#service">Service</a></li>{% endif %}
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
@@ -43,6 +44,7 @@
           <div class="hero__links">
             <a class="btn btn--primary screen-only" href="assets/CV.pdf">Download CV (PDF)</a>
             {% if basics.email %}<a class="btn contact-link" href="mailto:{{ basics.email }}">{{ basics.email }}</a>{% endif %}
+            {% if basics.phone %}<span class="btn contact-link print-only">{{ basics.phone }}</span>{% endif %}
             {% for link in links if link.url %}<a class="btn contact-link" href="{{ link.url }}">{{ link.label }}</a>{% endfor %}
           </div>
         </div>
@@ -59,49 +61,28 @@
     </section>
     {% endif %}
 
-    <!-- ========================== RESEARCH ============================== -->
-    {% if research_interests or research_statement %}
+    <!-- ====================== RESEARCH & PROJECTS ======================= -->
+    {% if projects %}
     <section id="research" class="section section--alt">
       <div class="container">
-        <h2 class="section__title">Research Interests</h2>
-        {% if research_interests %}
-        <ul class="tags">
-          {% for item in research_interests %}<li class="tag">{{ item }}</li>{% endfor %}
-        </ul>
-        {% endif %}
-        {% if research_statement %}<div class="prose"><p>{{ research_statement }}</p></div>{% endif %}
-      </div>
-    </section>
-    {% endif %}
-
-    <!-- ========================= PUBLICATIONS =========================== -->
-    {% if publications %}
-    <section id="publications" class="section">
-      <div class="container">
-        <h2 class="section__title">Publications</h2>
-        <ol class="pub-list">
-          {% for pub in publications %}
-          <li class="pub">
-            <p class="pub__title">{{ pub.title }}</p>
-            <p class="pub__meta">{{ pub.authors | mdbold }}{% if pub.year %} ({{ pub.year }}){% endif %}.{% if pub.venue %} <em>{{ pub.venue }}</em>{% endif %}</p>
-            {% if pub.links %}
-            <p class="pub__links">{% for l in pub.links %}<a href="{{ l.url }}">{{ l.label }}</a>{% if not loop.last %} &middot; {% endif %}{% endfor %}</p>
-            {% endif %}
+        <h2 class="section__title">Research &amp; Projects</h2>
+        <ul class="cards">
+          {% for p in projects %}
+          <li class="card">
+            <p class="card__title">{{ p.title }}</p>
+            {% if p.desc %}<p class="card__desc">{{ p.desc }}</p>{% endif %}
           </li>
           {% endfor %}
-        </ol>
+        </ul>
       </div>
     </section>
     {% endif %}
 
-    <!-- ========================== EXPERIENCE ============================ -->
-    {% if education or appointments or awards %}
-    <section id="experience" class="section section--alt">
+    <!-- ============================ EDUCATION =========================== -->
+    {% if education %}
+    <section id="education" class="section">
       <div class="container">
-        <h2 class="section__title">Education &amp; Experience</h2>
-
-        {% if education %}
-        <h3 class="subhead">Education</h3>
+        <h2 class="section__title">Education</h2>
         <ul class="timeline">
           {% for e in education %}
           <li class="timeline__item">
@@ -113,60 +94,96 @@
           </li>
           {% endfor %}
         </ul>
-        {% endif %}
+      </div>
+    </section>
+    {% endif %}
 
-        {% if appointments %}
-        <h3 class="subhead">Appointments</h3>
+    <!-- =========================== EXPERIENCE =========================== -->
+    {% if ventures or employment %}
+    <section id="experience" class="section section--alt">
+      <div class="container">
+        <h2 class="section__title">Experience</h2>
+
+        {% if ventures %}
+        <h3 class="subhead">Ventures</h3>
         <ul class="timeline">
-          {% for a in appointments %}
+          {% for v in ventures %}
           <li class="timeline__item">
-            <span class="timeline__date">{{ a.period }}</span>
+            <span class="timeline__date">{{ v.period }}</span>
             <div>
-              <p class="timeline__head">{{ a.what }}</p>
-              <p class="timeline__sub">{{ a.where }}{% if a.note %} &middot; {{ a.note }}{% endif %}</p>
+              <p class="timeline__head">{{ v.what }}</p>
+              {% if v.note %}<p class="timeline__sub">{{ v.note }}</p>{% endif %}
             </div>
           </li>
           {% endfor %}
         </ul>
         {% endif %}
 
-        {% if awards %}
-        <h3 class="subhead">Awards &amp; Grants</h3>
-        <ul class="plain">
-          {% for aw in awards %}<li><span class="muted">{{ aw.year }}</span> — {{ aw.what }}</li>{% endfor %}
+        {% if employment %}
+        <h3 class="subhead">Employment</h3>
+        <ul class="timeline">
+          {% for j in employment %}
+          <li class="timeline__item">
+            <span class="timeline__date">{{ j.period }}</span>
+            <div>
+              <p class="timeline__head">{{ j.what }}{% if j.where %} &middot; {{ j.where }}{% endif %}</p>
+              {% if j.note %}<p class="timeline__sub">{{ j.note }}</p>{% endif %}
+            </div>
+          </li>
+          {% endfor %}
         </ul>
         {% endif %}
       </div>
     </section>
     {% endif %}
 
-    <!-- =========================== TEACHING ============================= -->
-    {% if teaching or service %}
-    <section id="teaching" class="section">
+    <!-- ====================== LANGUAGES & SKILLS ======================== -->
+    {% if languages or skills %}
+    <section id="skills" class="section">
       <div class="container">
-        <h2 class="section__title">Teaching &amp; Service</h2>
-        {% if teaching %}
-        <h3 class="subhead">Teaching</h3>
-        <ul class="plain">
-          {% for t in teaching %}<li><span class="muted">{{ t.when }}</span> — {{ t.what }}</li>{% endfor %}
-        </ul>
+        <h2 class="section__title">Languages &amp; Skills</h2>
+
+        {% if languages %}
+        {% for group, items in languages.items() %}
+        <div class="skillrow">
+          <span class="skillrow__label">{{ group | capitalize }}</span>
+          <ul class="tags">{% for it in items %}<li class="tag">{{ it }}</li>{% endfor %}</ul>
+        </div>
+        {% endfor %}
         {% endif %}
-        {% if service %}
-        <h3 class="subhead">Service</h3>
-        <ul class="plain">
-          {% for s in service %}<li>{{ s | mdbold }}</li>{% endfor %}
-        </ul>
+
+        {% if skills %}
+        {% for group, items in skills.items() %}
+        <div class="skillrow">
+          <span class="skillrow__label">{{ group }}</span>
+          <ul class="tags">{% for it in items %}<li class="tag">{{ it }}</li>{% endfor %}</ul>
+        </div>
+        {% endfor %}
         {% endif %}
+      </div>
+    </section>
+    {% endif %}
+
+    <!-- ============================= SERVICE ============================ -->
+    {% if service %}
+    <section id="service" class="section section--alt">
+      <div class="container">
+        <h2 class="section__title">Service</h2>
+        {% for group, items in service.items() %}
+        <h3 class="subhead">{{ group }}</h3>
+        <ul class="plain">{% for s in items %}<li>{{ s | mdbold }}</li>{% endfor %}</ul>
+        {% endfor %}
       </div>
     </section>
     {% endif %}
 
     <!-- ============================ CONTACT ============================= -->
-    <section id="contact" class="section section--alt">
+    <section id="contact" class="section">
       <div class="container">
         <h2 class="section__title">Contact</h2>
         <p>The best way to reach me is by email:
           <a href="mailto:{{ basics.email }}">{{ basics.email }}</a>.</p>
+        {% if citizenship %}<p class="muted">Citizenship: {{ citizenship | join(" · ") }}.</p>{% endif %}
       </div>
     </section>
   </main>

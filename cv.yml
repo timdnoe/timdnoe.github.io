@@ -1,86 +1,105 @@
 # =============================================================================
 # cv.yml — SINGLE SOURCE OF TRUTH for Timothy Noe's CV.
 #
-# Edit ONLY this file. On push, CI regenerates:
-#   - index.html      (the website)
-#   - assets/CV.pdf   (the downloadable / shareable PDF)
-#
+# Edit ONLY this file. On push, CI regenerates index.html and assets/CV.pdf.
 # Tips:
-#   - Wrap your own name in **double asterisks** to bold it in author lists.
+#   - Wrap your own name in **double asterisks** to bold it in lists.
 #   - Delete or duplicate list items freely; empty sections are hidden.
-#   - Long text: use ">" for a folded paragraph (newlines become spaces).
+#   - ">" starts a folded paragraph (line breaks become spaces).
 # =============================================================================
 
 basics:
   name: Timothy Noe
-  title: Your Title / Role                      # e.g. Ph.D. Candidate in Linguistics
-  affiliation: Department · University
-  location: City, Country                       # optional; remove if unwanted
+  title: M.A. Candidate in Religious Studies (New Testament)
+  affiliation: Rutgers University
+  location: Piscataway, NJ
   email: tim.d.noe@gmail.com
+  phone: 848-239-0076          # shown on the PDF only, not the public website
   tagline: >
-    A short, plain-language summary of what you study and why it matters.
+    Bridging New Testament scholarship, the ancient languages, and
+    computational tools.
   summary: >
-    I am a researcher working on [your field]. My work focuses on
-    [core question / theme], drawing on [methods / traditions]. Before
-    joining [current institution], I [brief prior background].
-  # photo: assets/headshot.jpg                  # optional; uncomment to show on the website
+    I am an M.A. candidate in Religious Studies at Rutgers University, where my
+    work centers on the New Testament. I bring close study of the ancient
+    languages — Biblical Greek, Hebrew, and Latin — together with computational
+    methods, building projects such as a syntactical translation of Paul's
+    letters and a semantic lexicon of ancient Greek. My background spans physics
+    (Duke) and public administration (UNLV), and I have founded and built
+    software ventures alongside my academic work.
 
-# Profile links. Leave url empty ("") to hide a link.
+# Profile links. Add a url to show a link; leave "" to hide it.
 links:
-  - label: Google Scholar
-    url: ""
-  - label: ORCID
-    url: ""
   - label: GitHub
     url: https://github.com/timdnoe
+  - label: ORCID
+    url: ""
   - label: LinkedIn
     url: ""
 
-research_interests:
-  - Interest one
-  - Interest two
-  - Interest three
-  - Interest four
-
-research_statement: >
-  A short narrative describing the through-line of your research: the
-  problems you care about, your approach, and where the work is heading.
+# Independent research and synthesis projects.
+projects:
+  - title: English Translation of Paul's Letters
+    desc: >
+      A "syntactical" translation that seeks to reliably convey the underlying
+      Greek syntax.
+  - title: Semantic Lexicon of Ancient Greek
+    desc: >
+      A digital lexicon with "nearest-neighbor" and "cluster-mapping"
+      capabilities.
 
 education:
-  - period: "Year–Year"
-    what: "Ph.D., Field"
-    where: "Institution"
-    note: ""                                    # optional: advisor, thesis title
+  - period: "2024–2026"
+    what: "M.A., Religious Studies"
+    where: "Rutgers University"
+    note: "New Testament focus · GPA 4.0"
+  - period: "2019–2021"
+    what: "M.P.A., Public Administration"
+    where: "University of Nevada, Las Vegas"
+    note: "Nonprofit Management concentration · GPA 3.77"
+  - period: "2009–2013"
+    what: "B.A., Physics"
+    where: "Duke University"
+    note: "Philosophy minor · GPA 3.49"
 
-appointments:
-  - period: "Year–Present"
-    what: "Position"
-    where: "Institution"
+# Ventures you founded.
+ventures:
+  - period: "2023–present"
+    what: "Founder — TruGuide"
+    note: "Digital content discovery and delivery service."
+  - period: "2013–2018"
+    what: "Founder — Blue House Headphones"
+    note: "Online sales of MP3-player headphones."
+
+# Employment.
+employment:
+  - period: "2025"
+    what: "Teaching Assistant"
+    where: "Rutgers University"
+    note: "“Religions of the ‘Western’ World”"
+  - period: "2023–2025"
+    what: "Freelance Software Engineer"
+    where: "FullStackRemote"
     note: ""
+  - period: "2019–2022"
+    what: "Humanity's Team"
+    where: ""
+    note: "Developer of Digital Strategy & Nonprofit Resources (2021–2022); Program Curator (2020); Volunteer (2019)."
 
-publications:
-  - title: "Title of the paper or chapter."
-    authors: "Author A, **Noe, T.**, & Author B"
-    year: "Year"
-    venue: "Venue / Journal, vol(issue), pages."
-    links:
-      - { label: PDF, url: "#" }
-      - { label: DOI, url: "#" }
-      - { label: BibTeX, url: "#" }
-  - title: "Another representative publication."
-    authors: "**Noe, T.**"
-    year: "Year"
-    venue: "Venue / Journal."
-    links:
-      - { label: PDF, url: "#" }
+languages:
+  ancient: [Biblical Hebrew, Biblical Greek, Latin]
+  modern: [Italian, Spanish, French, German]
 
-awards:
-  - year: "Year"
-    what: "Award or grant name, funder."
-
-teaching:
-  - when: "Term Year"
-    what: "Course title, role (Institution)."
+skills:
+  Programming: [Python, JavaScript]
+  Proficiencies: [API integration, Semantic search for digital documents]
+  Certifications: [Microsoft Azure AI Fundamentals]
 
 service:
-  - "Reviewer, Journal / Conference."
+  Volunteer:
+    - "Knights of Columbus — 3rd Degree Member (2025–present)."
+    - "Foundation for Inner Peace — Digital Consultant (2019–2023)."
+    - "St. Joseph's Catholic Church, Las Vegas — daily food recovery from Zappos Bistro (2018–2019)."
+  Church:
+    - "Our Lady of Fatima, Piscataway, NJ (2024–present) — Catechist (5th grade); Lector (weekly Wednesdays, monthly Sundays); Heritage Day Committee."
+
+citizenship: [United States, Italy]
