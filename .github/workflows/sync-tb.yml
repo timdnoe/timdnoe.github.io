@@ -1,0 +1,47 @@
+name: Sync TB
+
+# Refresh the Terebinth (TB) New Testament snapshot in tb/data/ from
+# AncientLibrary.org (the source of truth) and commit any changes back to main.
+# Runs weekly, on manual dispatch, and whenever the sync script itself changes.
+on:
+  schedule:
+    - cron: '17 6 * * 1'   # Mondays 06:17 UTC
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'sync_tb.py'
+      - '.github/workflows/sync-tb.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-tb
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      # sync_tb.py uses only the Python standard library — no pip install needed.
+      - name: Snapshot TB New Testament
+        run: python sync_tb.py
+
+      - name: Commit refreshed snapshot
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add tb/data
+          if git diff --cached --quiet; then
+            echo "No changes — TB snapshot already up to date."
+          else
+            git commit -m "tb: refresh NT snapshot from AncientLibrary [skip ci]"
+            git push origin HEAD:main
+          fi

@@ -1,0 +1,210 @@
+/* ============================================================
+   Terebinth Translation reader — /tb/
+   Shares the design language of timothynoe.com (see ../styles.css).
+   Dependency-free; the Greek font (Cardo) degrades to a serif stack.
+   ============================================================ */
+
+:root {
+  --ink: #1a1a1a;
+  --ink-soft: #555;
+  --muted: #888;
+  --bg: #ffffff;
+  --bg-alt: #f6f7f9;
+  --line: #e6e8eb;
+  --accent: #2b5c8a;
+  --accent-dark: #1f4567;
+  --greek: #233;
+  --maxw: 940px;
+  --radius: 8px;
+  --greek-font: "Cardo", "Gentium Plus", "Galatia SIL", Georgia, "Times New Roman", serif;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  color: var(--ink);
+  background: var(--bg);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  font-size: 17px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* ------------------------------ Header ----------------------------- */
+.tb-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: saturate(180%) blur(8px);
+  border-bottom: 1px solid var(--line);
+}
+.tb-bar {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+.tb-brand { display: flex; flex-direction: column; line-height: 1.15; color: var(--ink); }
+.tb-brand:hover { text-decoration: none; }
+.tb-brand__title { font-weight: 700; letter-spacing: 0.2px; }
+.tb-brand__sub { font-size: 0.75rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; }
+
+.tb-controls { display: flex; align-items: center; gap: 12px; margin-left: auto; flex-wrap: wrap; }
+.tb-field { display: flex; align-items: center; gap: 6px; }
+.tb-field__label { font-size: 0.78rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; }
+.tb-field select {
+  font: inherit;
+  font-size: 0.92rem;
+  padding: 5px 8px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #fff;
+  color: var(--ink);
+  max-width: 180px;
+}
+
+.tb-toggles { display: flex; gap: 6px; }
+.tb-toggle {
+  font: inherit;
+  font-size: 0.82rem;
+  padding: 5px 10px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--ink-soft);
+  cursor: pointer;
+}
+.tb-toggle.is-on { background: var(--accent); border-color: var(--accent); color: #fff; }
+.tb-cv-link { font-size: 0.88rem; color: var(--ink-soft); }
+
+/* ------------------------------- Main ------------------------------ */
+.tb-main { max-width: var(--maxw); margin: 0 auto; padding: 28px 20px 48px; }
+
+/* Intro / landing */
+.tb-intro__title { font-size: 1.9rem; line-height: 1.15; margin: 8px 0 14px; }
+.tb-intro__lede { font-size: 1.1rem; color: var(--ink-soft); max-width: 70ch; }
+.tb-intro__note { color: var(--muted); font-size: 0.9rem; }
+
+.tb-book-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 10px;
+  margin: 24px 0;
+}
+.tb-book {
+  display: block;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #fff;
+  color: var(--ink);
+  cursor: pointer;
+  text-align: left;
+  font: inherit;
+}
+.tb-book:hover { border-color: var(--accent); color: var(--accent); }
+.tb-book__name { font-weight: 600; display: block; }
+.tb-book__greek { font-family: var(--greek-font); color: var(--muted); font-size: 0.92rem; }
+
+.tb-about { margin-top: 18px; border-top: 1px solid var(--line); padding-top: 14px; }
+.tb-about summary { cursor: pointer; font-weight: 600; color: var(--accent); }
+.tb-about p { color: var(--ink-soft); max-width: 72ch; }
+
+/* ------------------------------ Reader ----------------------------- */
+.tb-reader__head { margin-bottom: 18px; padding-bottom: 12px; border-bottom: 2px solid var(--accent); }
+.tb-reader__title { font-size: 1.6rem; margin: 0; }
+.tb-reader__greek { font-family: var(--greek-font); color: var(--muted); margin: 4px 0 0; font-size: 1.05rem; }
+
+.tb-verses { margin: 0; }
+
+/* Each verse: two-column parallel on wide screens, stacked on mobile. */
+.tb-verse {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--line);
+}
+.tb-verse.is-para-start { margin-top: 14px; }
+.tb-verse__col { position: relative; }
+.tb-verse__num {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--accent);
+  vertical-align: super;
+  margin-right: 5px;
+  user-select: none;
+}
+.tb-grc { font-family: var(--greek-font); font-size: 1.18rem; line-height: 1.85; color: var(--greek); }
+.tb-eng { font-size: 1.02rem; line-height: 1.7; }
+
+/* Morphology-tagged Greek words */
+.tb-word { cursor: help; border-bottom: 1px dotted transparent; transition: background 0.1s, border-color 0.1s; }
+body.morph-on .tb-word:hover,
+.tb-word.is-active { background: #eef3f8; border-bottom-color: var(--accent); border-radius: 3px; }
+
+/* View toggles hide a column */
+body:not(.show-greek) .tb-verse { grid-template-columns: 1fr; }
+body:not(.show-greek) .tb-verse__col--grc { display: none; }
+body:not(.show-greek) .tb-reader__greek { display: none; }
+
+/* Chapter nav */
+.tb-chapnav { display: flex; justify-content: space-between; gap: 12px; margin-top: 24px; }
+.tb-navbtn {
+  font: inherit;
+  font-size: 0.92rem;
+  padding: 9px 16px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #fff;
+  color: var(--ink);
+  cursor: pointer;
+}
+.tb-navbtn:hover:not(:disabled) { border-color: var(--accent); color: var(--accent); }
+.tb-navbtn:disabled { opacity: 0.4; cursor: default; }
+
+.tb-status { text-align: center; color: var(--muted); padding: 40px 0; }
+
+/* Morphology popover */
+.tb-morph {
+  position: absolute;
+  z-index: 100;
+  max-width: 260px;
+  background: #1f2733;
+  color: #f4f6f8;
+  border-radius: 6px;
+  padding: 8px 11px;
+  font-size: 0.85rem;
+  line-height: 1.45;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.22);
+  pointer-events: none;
+}
+.tb-morph__form { font-family: var(--greek-font); font-size: 1.05rem; font-weight: 700; }
+.tb-morph__lemma { font-family: var(--greek-font); color: #aecbe6; }
+.tb-morph__type { color: #c6cdd6; text-transform: capitalize; }
+
+/* ------------------------------ Footer ----------------------------- */
+.tb-footer {
+  border-top: 1px solid var(--line);
+  padding: 22px 20px;
+  margin-top: 20px;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+.tb-footer p { max-width: var(--maxw); margin: 0 auto; }
+
+/* ----------------------------- Responsive -------------------------- */
+@media (max-width: 720px) {
+  .tb-controls { width: 100%; margin-left: 0; }
+  .tb-verse { grid-template-columns: 1fr; gap: 6px; }
+  .tb-verse__col--grc { padding-bottom: 6px; }
+  .tb-grc { font-size: 1.12rem; }
+}
