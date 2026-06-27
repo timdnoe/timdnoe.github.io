@@ -1,0 +1,256 @@
+{
+  "generated": "2026-06-27",
+  "source": "https://ancientlibrary.org",
+  "greek_source": "SBLGNT (Society of Biblical Literature Greek New Testament)",
+  "translation": {
+    "id": "TB",
+    "name": "Terebinth",
+    "translator": "Timothy Noe"
+  },
+  "has_morphology": true,
+  "books": [
+    {
+      "id": "nt-matt",
+      "name": "Matthew",
+      "greek_title": "Κατὰ Μαθθαῖον",
+      "chapters": 28,
+      "verses": 1068,
+      "greek_source": "SBLGNT",
+      "subcategory": "gospel"
+    },
+    {
+      "id": "nt-mark",
+      "name": "Mark",
+      "greek_title": "Κατὰ Μᾶρκον",
+      "chapters": 16,
+      "verses": 673,
+      "greek_source": "SBLGNT",
+      "subcategory": "gospel"
+    },
+    {
+      "id": "nt-luke",
+      "name": "Luke",
+      "greek_title": "Κατὰ Λουκᾶν",
+      "chapters": 24,
+      "verses": 1149,
+      "greek_source": "SBLGNT",
+      "subcategory": "gospel"
+    },
+    {
+      "id": "nt-john",
+      "name": "John",
+      "greek_title": "Κατὰ Ἰωάννην",
+      "chapters": 21,
+      "verses": 878,
+      "greek_source": "SBLGNT",
+      "subcategory": "gospel"
+    },
+    {
+      "id": "nt-acts",
+      "name": "Acts of the Apostles",
+      "greek_title": "Πράξεις Ἀποστόλων",
+      "chapters": 28,
+      "verses": 1002,
+      "greek_source": "SBLGNT",
+      "subcategory": "narrative"
+    },
+    {
+      "id": "nt-rom",
+      "name": "Epistle to the Romans",
+      "greek_title": "Πρὸς Ῥωμαίους",
+      "chapters": 16,
+      "verses": 430,
+      "greek_source": "SBLGNT",
+      "subcategory": "pauline_epistle"
+    },
+    {
+      "id": "nt-1cor",
+      "name": "First Epistle to the Corinthians",
+      "greek_title": "Πρὸς Κορινθίους Αʹ",
+      "chapters": 16,
+      "verses": 437,
+      "greek_source": "SBLGNT",
+      "subcategory": "pauline_epistle"
+    },
+    {
+      "id": "nt-2cor",
+      "name": "Second Epistle to the Corinthians",
+      "greek_title": "Πρὸς Κορινθίους Βʹ",
+      "chapters": 13,
+      "verses": 256,
+      "greek_source": "SBLGNT",
+      "subcategory": "pauline_epistle"
+    },
+    {
+      "id": "nt-gal",
+      "name": "Epistle to the Galatians",
+      "greek_title": "Πρὸς Γαλάτας",
+      "chapters": 6,
+      "verses": 149,
+      "greek_source": "SBLGNT",
+      "subcategory": "pauline_epistle"
+    },
+    {
+      "id": "nt-eph",
+      "name": "Epistle to the Ephesians",
+      "greek_title": "Πρὸς Ἐφεσίους",
+      "chapters": 6,
+      "verses": 155,
+      "greek_source": "SBLGNT",
+      "subcategory": "pauline_epistle"
+    },
+    {
+      "id": "nt-phil",
+      "name": "Epistle to the Philippians",
+      "greek_title": "Πρὸς Φιλιππησίους",
+      "chapters": 4,
+      "verses": 104,
+      "greek_source": "SBLGNT",
+      "subcategory": "pauline_epistle"
+    },
+    {
+      "id": "nt-col",
+      "name": "Epistle to the Colossians",
+      "greek_title": "Πρὸς Κολοσσαεῖς",
+      "chapters": 4,
+      "verses": 95,
+      "greek_source": "SBLGNT",
+      "subcategory": "pauline_epistle"
+    },
+    {
+      "id": "nt-1thess",
+      "name": "First Epistle to the Thessalonians",
+      "greek_title": "Πρὸς Θεσσαλονικεῖς Αʹ",
+      "chapters": 5,
+      "verses": 89,
+      "greek_source": "SBLGNT",
+      "subcategory": "pauline_epistle"
+    },
+    {
+      "id": "nt-2thess",
+      "name": "Second Epistle to the Thessalonians",
+      "greek_title": "Πρὸς Θεσσαλονικεῖς Βʹ",
+      "chapters": 3,
+      "verses": 47,
+      "greek_source": "SBLGNT",
+      "subcategory": "pauline_epistle"
+    },
+    {
+      "id": "nt-1tim",
+      "name": "First Epistle to Timothy",
+      "greek_title": "Πρὸς Τιμόθεον Αʹ",
+      "chapters": 6,
+      "verses": 113,
+      "greek_source": "SBLGNT",
+      "subcategory": "pastoral_epistle"
+    },
+    {
+      "id": "nt-2tim",
+      "name": "Second Epistle to Timothy",
+      "greek_title": "Πρὸς Τιμόθεον Βʹ",
+      "chapters": 4,
+      "verses": 83,
+      "greek_source": "SBLGNT",
+      "subcategory": "pastoral_epistle"
+    },
+    {
+      "id": "nt-titus",
+      "name": "Epistle to Titus",
+      "greek_title": "Πρὸς Τίτον",
+      "chapters": 3,
+      "verses": 46,
+      "greek_source": "SBLGNT",
+      "subcategory": "pastoral_epistle"
+    },
+    {
+      "id": "nt-phlm",
+      "name": "Epistle to Philemon",
+      "greek_title": "Πρὸς Φιλήμονα",
+      "chapters": 1,
+      "verses": 25,
+      "greek_source": "SBLGNT",
+      "subcategory": "pauline_epistle"
+    },
+    {
+      "id": "nt-heb",
+      "name": "Epistle to the Hebrews",
+      "greek_title": "Πρὸς Ἑβραίους",
+      "chapters": 13,
+      "verses": 303,
+      "greek_source": "SBLGNT",
+      "subcategory": "general_epistle"
+    },
+    {
+      "id": "nt-jas",
+      "name": "Epistle of James",
+      "greek_title": "Ἰακώβου",
+      "chapters": 5,
+      "verses": 108,
+      "greek_source": "SBLGNT",
+      "subcategory": "general_epistle"
+    },
+    {
+      "id": "nt-1pet",
+      "name": "First Epistle of Peter",
+      "greek_title": "Πέτρου Αʹ",
+      "chapters": 5,
+      "verses": 105,
+      "greek_source": "SBLGNT",
+      "subcategory": "general_epistle"
+    },
+    {
+      "id": "nt-2pet",
+      "name": "Second Epistle of Peter",
+      "greek_title": "Πέτρου Βʹ",
+      "chapters": 3,
+      "verses": 61,
+      "greek_source": "SBLGNT",
+      "subcategory": "general_epistle"
+    },
+    {
+      "id": "nt-1john",
+      "name": "First Epistle of John",
+      "greek_title": "Ἰωάννου Αʹ",
+      "chapters": 5,
+      "verses": 105,
+      "greek_source": "SBLGNT",
+      "subcategory": "johannine_epistle"
+    },
+    {
+      "id": "nt-2john",
+      "name": "Second Epistle of John",
+      "greek_title": "Ἰωάννου Βʹ",
+      "chapters": 1,
+      "verses": 13,
+      "greek_source": "SBLGNT",
+      "subcategory": "johannine_epistle"
+    },
+    {
+      "id": "nt-3john",
+      "name": "Third Epistle of John",
+      "greek_title": "Ἰωάννου Γʹ",
+      "chapters": 1,
+      "verses": 15,
+      "greek_source": "SBLGNT",
+      "subcategory": "johannine_epistle"
+    },
+    {
+      "id": "nt-jude",
+      "name": "Epistle of Jude",
+      "greek_title": "Ἰούδα",
+      "chapters": 1,
+      "verses": 25,
+      "greek_source": "SBLGNT",
+      "subcategory": "general_epistle"
+    },
+    {
+      "id": "nt-rev",
+      "name": "Revelation of John",
+      "greek_title": "Ἀποκάλυψις Ἰωάννου",
+      "chapters": 22,
+      "verses": 405,
+      "greek_source": "SBLGNT",
+      "subcategory": "apocalypse"
+    }
+  ]
+}

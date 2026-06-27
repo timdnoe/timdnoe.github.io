@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Terebinth Translation of the New Testament — Timothy Noe</title>
+  <meta name="description" content="The Terebinth Translation (TB): an independent, syntax-forward English translation of the Greek New Testament by Timothy Noe, presented in parallel with the SBLGNT Greek and word-level morphology.">
+  <meta property="og:title" content="The Terebinth Translation of the New Testament">
+  <meta property="og:description" content="An independent, syntax-forward English translation of the Greek New Testament by Timothy Noe, shown in parallel with the SBLGNT Greek.">
+  <meta property="og:type" content="article">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cardo:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="reader.css">
+</head>
+<body>
+  <header class="tb-header">
+    <div class="tb-bar">
+      <a class="tb-brand" href="/">
+        <span class="tb-brand__title">Terebinth Translation</span>
+        <span class="tb-brand__sub">New Testament</span>
+      </a>
+      <nav class="tb-controls" aria-label="Passage">
+        <label class="tb-field">
+          <span class="tb-field__label">Book</span>
+          <select id="book-select" aria-label="Select book"></select>
+        </label>
+        <label class="tb-field">
+          <span class="tb-field__label">Ch.</span>
+          <select id="chapter-select" aria-label="Select chapter"></select>
+        </label>
+        <div class="tb-toggles" role="group" aria-label="View options">
+          <button id="toggle-greek" class="tb-toggle is-on" aria-pressed="true">Greek</button>
+          <button id="toggle-morph" class="tb-toggle is-on" aria-pressed="true" title="Show lemma & parsing on hover/tap">Morphology</button>
+        </div>
+        <a class="tb-cv-link" href="/">&larr; CV</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="tb-main">
+    <!-- Landing / about, shown before a chapter is opened -->
+    <section id="tb-intro" class="tb-intro" hidden>
+      <h1 class="tb-intro__title">The Terebinth Translation of the New Testament</h1>
+      <p class="tb-intro__lede">
+        An independent, syntax-forward English translation of the Greek New Testament by
+        <strong>Timothy Noe</strong>, presented in parallel with the Greek so the structure
+        of each rendering can be examined directly.
+      </p>
+      <p class="tb-intro__note" id="intro-meta"></p>
+      <div class="tb-book-grid" id="book-grid"></div>
+      <details class="tb-about">
+        <summary>About this translation</summary>
+        <p>
+          The Terebinth Translation (TB) seeks to convey the underlying Greek syntax in
+          English for New Testament scholars and students of biblical Greek. Each verse is
+          shown beside its Greek source text; hovering or tapping a Greek word reveals its
+          lemma and part of speech.
+        </p>
+        <p>
+          The text is maintained at <a href="https://ancientlibrary.org" rel="noopener">AncientLibrary.org</a>,
+          which is the authoritative source; this reader mirrors a dated snapshot so it loads
+          quickly and reliably. The Greek is the SBLGNT (Society of Biblical Literature Greek
+          New Testament).
+        </p>
+      </details>
+    </section>
+
+    <!-- Chapter reader -->
+    <section id="tb-reader" class="tb-reader" hidden>
+      <div class="tb-reader__head">
+        <h1 id="reader-title" class="tb-reader__title"></h1>
+        <p id="reader-greek-title" class="tb-reader__greek"></p>
+      </div>
+      <div id="verses" class="tb-verses" aria-live="polite"></div>
+      <nav class="tb-chapnav" aria-label="Chapter navigation">
+        <button id="prev-chapter" class="tb-navbtn" rel="prev">&larr; Previous</button>
+        <button id="next-chapter" class="tb-navbtn" rel="next">Next &rarr;</button>
+      </nav>
+    </section>
+
+    <p id="tb-status" class="tb-status" hidden></p>
+  </main>
+
+  <footer class="tb-footer">
+    <p>
+      Terebinth Translation &copy; <span id="year"></span> Timothy Noe.
+      Greek: SBLGNT. Text source of truth:
+      <a href="https://ancientlibrary.org" rel="noopener">AncientLibrary.org</a>.
+      Snapshot <span id="footer-date"></span>.
+    </p>
+  </footer>
+
+  <!-- Morphology popover (single reused element) -->
+  <div id="morph-pop" class="tb-morph" role="tooltip" hidden></div>
+
+  <script src="reader.js" defer></script>
+</body>
+</html>

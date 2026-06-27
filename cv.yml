@@ -43,11 +43,13 @@ links:
 #              - { label: Paper,  url: https://... }
 projects:
   - title: Terebinth English Translation of New Testament
-    url: ""        # ← add the project's URL here to link the title
+    url: "https://timothynoe.com/tb/"   # parallel Greek/English reader
     desc: >
       A "syntactical" translation that seeks to reliably convey the underlying
       Greek syntax in English for New Testament scholars and students of biblical
       Greek.
+    links:
+      - { label: Read (Greek ‖ English), url: "https://timothynoe.com/tb/" }
   - title: Ancient Library
     url: https://ancientlibrary.org
     desc: >
