@@ -13,17 +13,17 @@ basics:
   title: M.A. Candidate in Religious Studies (New Testament)
   affiliation: Rutgers University
   location: Piscataway, NJ
-  email: tim.d.noe@gmail.com
+  email: timothy.daniel.noe@gmail.com
   phone: 848-239-0076          # shown on the PDF only, not the public website
   tagline: >
     Bridging New Testament scholarship, the ancient languages, and
     computational tools.
   summary: >
-    I am an M.A. candidate in Religious Studies at Rutgers University, where my
-    work centers on the New Testament. I bring close study of the ancient
+    I am a ThM candidate in Biblical Studies at Princeton Theological Seminary,
+    centering my work on the New Testament. I bring close study of the ancient
     languages — Biblical Greek, Hebrew, and Latin — together with computational
-    methods, building projects such as a syntactical translation of Paul's
-    letters and a semantic lexicon of ancient Greek. My background spans physics
+    methods, building projects such as AncientLibrary.org and assembling English
+    translations such as the Terebinth Translation. My background spans physics
     (Duke) and public administration (UNLV), and I have founded and built
     software ventures alongside my academic work.
 
@@ -44,18 +44,25 @@ links:
 #              - { label: GitHub, url: https://github.com/timdnoe/... }
 #              - { label: Paper,  url: https://... }
 projects:
-  - title: Terebinth Translation
+  - title: Terebinth English Translation of New Testament
     url: ""        # ← add the project's URL here to link the title
     desc: >
-      A "syntactical" English translation of Paul's letters that seeks to
-      reliably convey the underlying Greek syntax.
+      A "syntactical" translation that seeks to reliably convey the underlying
+      Greek syntax in English for New Testament scholars and students of biblical
+      Greek.
   - title: Ancient Library
     url: https://ancientlibrary.org
     desc: >
-      A digital lexicon of ancient Greek with "nearest-neighbor" and
-      "cluster-mapping" capabilities.
+      Assembled and encoded a multilingual corpus of ancient sacred and
+      biblically-adjacent texts (Hebrew, Greek, Latin), with full morphological
+      tagging, lemma-based concordance search, cross-reference linking, and
+      original-plus-translation parallel editions.
 
 education:
+  - period: "2026–2027"
+    what: "ThM, Biblical Studies"
+    where: "Princeton Theological Seminary"
+    note: "New Testament focus"
   - period: "2024–2026"
     what: "M.A., Religious Studies"
     where: "Rutgers University"
@@ -72,7 +79,7 @@ education:
 # Ventures you founded.
 ventures:
   - period: "2023–present"
-    what: "Founder — TruGuide"
+    what: "Co-founder — TruGuide"
     note: "Digital content discovery and delivery service."
   - period: "2013–2018"
     what: "Founder — Blue House Headphones"
@@ -104,6 +111,7 @@ skills:
 
 service:
   Volunteer:
+    - "Beth Martutho Institute — Web Developer (2006–present)."
     - "Knights of Columbus — 3rd Degree Member (2025–present)."
     - "Foundation for Inner Peace — Digital Consultant (2019–2023)."
     - "St. Joseph's Catholic Church, Las Vegas — daily food recovery from Zappos Bistro (2018–2019)."
