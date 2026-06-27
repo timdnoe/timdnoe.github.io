@@ -69,8 +69,9 @@
         <ul class="cards">
           {% for p in projects %}
           <li class="card">
-            <p class="card__title">{{ p.title }}</p>
+            <p class="card__title">{% if p.url %}<a href="{{ p.url }}" target="_blank" rel="noopener">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}</p>
             {% if p.desc %}<p class="card__desc">{{ p.desc }}</p>{% endif %}
+            {% if p.links %}<p class="card__links">{% for l in p.links %}<a href="{{ l.url }}" target="_blank" rel="noopener">{{ l.label }}</a>{% if not loop.last %} &middot; {% endif %}{% endfor %}</p>{% endif %}
           </li>
           {% endfor %}
         </ul>

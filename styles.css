@@ -181,6 +181,7 @@ a:hover { text-decoration: underline; }
 }
 .card__title { font-weight: 600; margin: 0 0 4px; }
 .card__desc { margin: 0; color: var(--ink-soft); font-size: 0.95rem; }
+.card__links { margin: 6px 0 0; font-size: 0.88rem; }
 
 /* ------------------------- Skill rows -------------------------- */
 .skillrow { display: flex; gap: 14px; align-items: baseline; padding: 6px 0; }

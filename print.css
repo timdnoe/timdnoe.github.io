@@ -94,6 +94,7 @@ p { margin: 0 0 4pt; }
 .card { border: 0; padding: 0; margin: 0 0 5pt; page-break-inside: avoid; }
 .card__title { font-weight: bold; margin: 0; }
 .card__desc { margin: 0; color: #333; }
+.card__links { margin: 0; font-size: 8.5pt; }
 
 /* language / skill rows: inline label + values */
 .skillrow { display: block; padding: 1pt 0; page-break-inside: avoid; }

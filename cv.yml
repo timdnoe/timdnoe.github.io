@@ -37,15 +37,23 @@ links:
     url: ""
 
 # Independent research and synthesis projects.
+# Optional per project:
+#   url:   makes the title a clickable link to the project.
+#   links: a list of extra labeled links, e.g.
+#            links:
+#              - { label: GitHub, url: https://github.com/timdnoe/... }
+#              - { label: Paper,  url: https://... }
 projects:
-  - title: English Translation of Paul's Letters
+  - title: Terebinth Translation
+    url: ""        # ← add the project's URL here to link the title
     desc: >
-      A "syntactical" translation that seeks to reliably convey the underlying
-      Greek syntax.
-  - title: Semantic Lexicon of Ancient Greek
+      A "syntactical" English translation of Paul's letters that seeks to
+      reliably convey the underlying Greek syntax.
+  - title: Ancient Library
+    url: https://ancientlibrary.org
     desc: >
-      A digital lexicon with "nearest-neighbor" and "cluster-mapping"
-      capabilities.
+      A digital lexicon of ancient Greek with "nearest-neighbor" and
+      "cluster-mapping" capabilities.
 
 education:
   - period: "2024–2026"
