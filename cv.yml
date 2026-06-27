@@ -30,7 +30,7 @@ basics:
 # Profile links. Add a url to show a link; leave "" to hide it.
 links:
   - label: GitHub
-    url: https://github.com/timdnoe
+    # url: https://github.com/timdnoe
   - label: ORCID
     url: ""
   - label: LinkedIn
@@ -76,15 +76,6 @@ education:
     where: "Duke University"
     note: "Philosophy minor · GPA 3.49"
 
-# Ventures you founded.
-ventures:
-  - period: "2023–present"
-    what: "Co-founder — TruGuide"
-    note: "Digital content discovery and delivery service."
-  - period: "2013–2018"
-    what: "Founder — Blue House Headphones"
-    note: "Online sales of MP3-player headphones."
-
 # Employment.
 employment:
   - period: "2025"
@@ -100,20 +91,30 @@ employment:
     where: ""
     note: "Developer of Digital Strategy & Nonprofit Resources (2021–2022); Program Curator (2020); Volunteer (2019)."
 
+# Ventures you founded.
+ventures:
+  - period: "2023–present"
+    what: "Co-founder — TruGuide"
+    note: "Digital content discovery and delivery service."
+  - period: "2013–2018"
+    what: "Founder — Blue House Headphones"
+    note: "Online sales of MP3-player headphones."
+
 languages:
   ancient: [Biblical Hebrew, Biblical Greek, Latin]
   modern: [Italian, Spanish, French, German]
+  programming: [Python, JavaScript]
 
-skills:
-  Programming: [Python, JavaScript]
-  Proficiencies: [API integration, Semantic search for digital documents]
-  Certifications: [Microsoft Azure AI Fundamentals]
+# skills:
+  # Programming: [Python, JavaScript]
+  # Proficiencies: [API integration, Semantic search for digital documents]
+  # Certifications: [Microsoft Azure AI Fundamentals]
 
 service:
   Volunteer:
     - "Beth Martutho Institute — Web Developer (2006–present)."
     - "Knights of Columbus — 3rd Degree Member (2025–present)."
-    - "Foundation for Inner Peace — Digital Consultant (2019–2023)."
+    # - "Foundation for Inner Peace — Digital Consultant (2019–2023)."
     - "St. Joseph's Catholic Church, Las Vegas — daily food recovery from Zappos Bistro (2018–2019)."
   Church:
     - "Our Lady of Fatima, Piscataway, NJ (2024–present) — Catechist (5th grade); Lector (weekly Wednesdays, monthly Sundays); Heritage Day Committee."
