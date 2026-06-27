@@ -37,8 +37,6 @@ python build.py
 - `assets/` — generated `CV.pdf`; also drop a `headshot.jpg` here and set
   `basics.photo` in `cv.yml` to show it.
 - `CNAME` — custom domain (`timothynoe.com`).
-- `index4.9.html` + `style.css` — *The Present Testament* project (a sub-page,
-  linked from the homepage footer).
 
 ## Publishing
 
