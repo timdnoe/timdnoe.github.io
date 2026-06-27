@@ -29,10 +29,10 @@ basics:
 
 # Profile links. Add a url to show a link; leave "" to hide it.
 links:
-  - label: GitHub
+  # - label: GitHub
     # url: https://github.com/timdnoe
   - label: ORCID
-    url: ""
+    url: "0009-0002-0751-4285"
   - label: LinkedIn
     url: ""
 
@@ -96,12 +96,12 @@ ventures:
   - period: "2023–present"
     what: "Co-founder — TruGuide"
     note: "Digital content discovery and delivery service."
-  - period: "2013–2018"
-    what: "Founder — Blue House Headphones"
-    note: "Online sales of MP3-player headphones."
+  # - period: "2013–2018"
+  #   what: "Founder — Blue House Headphones"
+  #   note: "Online sales of MP3-player headphones."
 
 languages:
-  ancient: [Biblical Hebrew, Biblical Greek, Latin]
+  ancient: [Biblical Hebrew, Biblical Greek, Latin, Syriac]
   modern: [Italian, Spanish, French, German]
   programming: [Python, JavaScript]
 
