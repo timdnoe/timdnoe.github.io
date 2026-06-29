@@ -16,16 +16,19 @@ basics:
   email: timothy.daniel.noe@gmail.com
   phone: 848-239-0076          # shown on the PDF only, not the public website
   tagline: >
-    Bridging New Testament scholarship, the ancient languages, and
-    computational tools.
+    New Testament philology and the earliest Christian literature, with computational methods
+  interests: Jesus tradition > Paul > the Post-apostolic generation
   summary: >
-    I am a ThM candidate in Biblical Studies at Princeton Theological Seminary,
-    centering my work on the New Testament. I bring close study of the ancient
-    languages — Biblical Greek, Hebrew, and Latin — together with computational
-    methods, building projects such as AncientLibrary.org and assembling English
-    translations such as the Terebinth Translation. My background spans physics
-    (Duke) and public administration (UNLV), and I have founded and built
-    software ventures alongside my academic work.
+    I am a ThM candidate in Biblical Studies, New Testament, at Princeton Theological Seminary.
+    My research focuses on the linguistic and intertextual development of the earliest 
+    Christian writings (the Jesus tradition in the Gospels, the letters of Paul, and the
+    Apostolic Fathers) working closely from the Greek alongside Hebrew and Latin.
+    To this research I bring computational and corpus-philological methods, best represented 
+    by Ancient Library, a morphologically tagged multilingual corpus with robust search capabilities.
+    I am also the author of the Terebinth Translation, a syntactically transparent English
+    translation of the Greek New Testament. My previous training in physics at Duke grounds my work
+    in rigorous quantitative method.
+    
 
 # Profile links. Add a url to show a link; leave "" to hide it.
 links:
@@ -33,30 +36,6 @@ links:
     url: "https://orcid.org/0009-0002-0751-4285"
   - label: LinkedIn
     url: ""
-
-# Independent research and synthesis projects.
-# Optional per project:
-#   url:   makes the title a clickable link to the project.
-#   links: a list of extra labeled links, e.g.
-#            links:
-#              - { label: GitHub, url: https://github.com/timdnoe/... }
-#              - { label: Paper,  url: https://... }
-projects:
-  - title: Terebinth English Translation of New Testament
-    url: "https://timothynoe.com/tb/"   # parallel Greek/English reader
-    desc: >
-      A "syntactical" translation that seeks to reliably convey the underlying
-      Greek syntax in English for New Testament scholars and students of biblical
-      Greek.
-    links:
-      - { label: Read (Greek ‖ English), url: "https://timothynoe.com/tb/" }
-  - title: Ancient Library
-    url: https://ancientlibrary.org
-    desc: >
-      Assembled and encoded a multilingual corpus of ancient sacred and
-      biblically-adjacent texts (Hebrew, Greek, Latin), with full morphological
-      tagging, lemma-based concordance search, cross-reference linking, and
-      original-plus-translation parallel editions.
 
 education:
   - period: "2026–2027"
@@ -67,56 +46,87 @@ education:
     what: "M.A., Religious Studies"
     where: "Rutgers University"
     note: "New Testament focus · GPA 4.0"
+    thesis: "Self-Mastery in New Testament"
+    advisor: "Emma Wasserman"
+    link: "placeholder.com"
   - period: "2019–2021"
     what: "M.P.A., Public Administration"
     where: "University of Nevada, Las Vegas"
-    note: "Nonprofit Management concentration · GPA 3.77"
   - period: "2009–2013"
     what: "B.A., Physics"
     where: "Duke University"
-    note: "Philosophy minor · GPA 3.49"
+    note: "Philosophy minor"
+  
 
-# Employment.
-employment:
-  - period: "2025"
-    what: "Teaching Assistant"
-    where: "Rutgers University"
-    note: "“Religions of the ‘Western’ World”"
-  - period: "2023–2025"
-    what: "Freelance Software Engineer"
-    where: "FullStackRemote"
-    note: ""
-  - period: "2019–2022"
-    what: "Humanity's Team"
-    where: ""
-    note: "Developer of Digital Strategy & Nonprofit Resources (2021–2022); Program Curator (2020); Volunteer (2019)."
+# Independent research and synthesis projects.
+# Optional per project:
+#   url:   makes the title a clickable link to the project.
+#   links: a list of extra labeled links, e.g.
+#            links:
+#              - { label: GitHub, url: https://github.com/timdnoe/... }
+#              - { label: Paper,  url: https://... }
+# Display this section under a heading like "Research & Digital Humanities"
+# rather than just "Projects" — it frames the work as scholarship.
+projects:
+  - title: Ancient Library
+    url: https://ancientlibrary.org
+    role: Creator, encoder, and developer
+    years: 2025–present 
+    desc: >
+      A multilingual digital corpus of ancient sacred and cognate texts in
+      Hebrew, Greek, and Latin, encoded with full morphological tagging and
+      lemmatization and served through lemma-based concordance search,
+      cross-reference linking, and aligned original-and-translation parallel
+      editions.
 
-# Ventures you founded.
-ventures:
-  - period: "2023–present"
-    what: "Co-founder — TruGuide"
-    note: "Digital content discovery and delivery service."
-  # - period: "2013–2018"
-  #   what: "Founder — Blue House Headphones"
-  #   note: "Online sales of MP3-player headphones."
+  - title: Terebinth Translation of the New Testament
+    url: "https://timothynoe.com/tb/"
+    role: Translator and editor
+    years: 2022–present
+    status: "In progress"
+    desc: >
+      An original, syntactically transparent English translation of the New
+      Testament that mirrors the word order, clause structure, and grammatical
+      relationships of the underlying Greek, intended as a study resource for
+      scholars and advanced students working directly with the Greek text.
 
 languages:
-  ancient: [Biblical Hebrew, Biblical Greek, Latin, Syriac]
-  modern: [Italian, Spanish, French, German]
-  programming: [Python, JavaScript]
+  ancient:
+    - "Biblical Greek — advanced reading proficiency"
+    - "Biblical Hebrew — intermediate reading proficiency"
+    - "Latin — intermediate reading proficiency"
+    - "Syriac — introductory (summer intensive)"
+  modern:
+    - "Italian — proficient (reading and conversation)"
+    - "German — reading exam in progress (2026)"
+    - "French — elementary"
+    - "Spanish — basic"
 
-# skills:
-  # Programming: [Python, JavaScript]
-  # Proficiencies: [API integration, Semantic search for digital documents]
-  # Certifications: [Microsoft Azure AI Fundamentals]
+teaching:
+  - period: "2025"
+    what: "Teaching Assistant — Religions of the 'Western' World"
+    where: "Rutgers University"
+    note: "Graded student work and assessments; contributed to course structure and materials; supported instruction for an undergraduate survey."
+
+memberships:
+  # - what: "Society of Biblical Literature (SBL)"
+  # - what: "Catholic Biblical Association (CBA)"
+
+# Ventures you founded.
+other:
+  - period: "2023–present"
+    what: "Software engineering"
+    note: "Freelance and independent full-stack development, including web applications and content-delivery systems."
+
+skills:
+  programming: [Python, JavaScript]
 
 service:
   Volunteer:
-    - "Beth Martutho Institute — Web Developer (2006–present)."
-    - "Knights of Columbus — 3rd Degree Member (2025–present)."
-    # - "Foundation for Inner Peace — Digital Consultant (2019–2023)."
-    - "St. Joseph's Catholic Church, Las Vegas — daily food recovery from Zappos Bistro (2018–2019)."
+    - "Beth Mardutho Institute — Web Developer (2026–present)"
+    - "Knights of Columbus — 3rd Degree Member (2025–present)"
+    - "St. Joseph's Catholic Church, Las Vegas — food recovery and meal service (2018–2019)"
   Church:
-    - "Our Lady of Fatima, Piscataway, NJ (2024–present) — Catechist (5th grade); Lector (weekly Wednesdays, monthly Sundays); Heritage Day Committee."
+    - "Our Lady of Fatima, Piscataway, NJ (2024–present) — Catechist (5th grade); Lector (weekly Wednesdays, monthly Sundays); Heritage Day Committee"
 
 citizenship: [United States, Italy]
