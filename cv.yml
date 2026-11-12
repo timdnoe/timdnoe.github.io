@@ -97,9 +97,9 @@ languages:
     - "Latin — intermediate reading proficiency"
     - "Syriac — introductory (summer intensive)"
   modern:
-    - "Italian — proficient (reading and conversation)"
-    - "German — reading exam in progress (2026)"
+    - "German — PASS on Graduate Language Proficiency Exam at Rutgers University, July 11, 2026"
     - "French — elementary"
+    - "Italian — proficient (reading and conversation)"
     - "Spanish — basic"
 
 teaching:
@@ -108,6 +108,10 @@ teaching:
     where: "Rutgers University"
     note: "Graded student work and assessments; contributed to course structure and materials; supported instruction for an undergraduate survey."
 
+committees:
+  - period: "2026–present"
+    what: "English Translation Committee for Antioch Bible"
+    # note: "Planning and executing an annual parish event celebrating the cultural heritage of the parish community."
 memberships:
   # - what: "Society of Biblical Literature (SBL)"
   # - what: "Catholic Biblical Association (CBA)"
@@ -119,14 +123,14 @@ other:
     note: "Freelance and independent full-stack development, including web applications and content-delivery systems."
 
 skills:
-  programming: [Python, JavaScript]
+  programming: [Python, JavaScript, Claude Code]
 
 service:
   Volunteer:
     - "Beth Mardutho Institute — Web Developer (2026–present)"
-    - "Knights of Columbus — 3rd Degree Member (2025–present)"
+    - "Knights of Columbus — Chapter EFF Director (Evangelization, Faith & Formation) (2025–present)"
     - "St. Joseph's Catholic Church, Las Vegas — food recovery and meal service (2018–2019)"
   Church:
-    - "Our Lady of Fatima, Piscataway, NJ (2024–present) — Catechist (5th grade); Lector (weekly Wednesdays, monthly Sundays); Heritage Day Committee"
+    - "Our Lady of Fatima, Piscataway, NJ (2024–present) — Catechist (5th grade); Lector (weekly Mondays and Fridays, monthly Sundays); Heritage Day Committee"
 
 citizenship: [United States, Italy]
