@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>The Terebinth Translation of the New Testament — Timothy Noe</title>
-  <meta name="description" content="The Terebinth Translation (TB): an independent, syntax-forward English translation of the Greek New Testament by Timothy Noe, presented in parallel with the SBLGNT Greek and word-level morphology.">
+  <meta name="description" content="The Terebinth Translation (TB): a syntax-for-syntax English translation of the Greek New Testament by Timothy Noe, presented in parallel with the SBLGNT Greek and word-level morphology.">
   <meta property="og:title" content="The Terebinth Translation of the New Testament">
-  <meta property="og:description" content="An independent, syntax-forward English translation of the Greek New Testament by Timothy Noe, shown in parallel with the SBLGNT Greek.">
+  <meta property="og:description" content="A syntax-for-syntax English translation of the Greek New Testament by Timothy Noe, shown in parallel with the SBLGNT Greek.">
   <meta property="og:type" content="article">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -42,26 +42,184 @@
     <!-- Landing / about, shown before a chapter is opened -->
     <section id="tb-intro" class="tb-intro" hidden>
       <h1 class="tb-intro__title">The Terebinth Translation of the New Testament</h1>
-      <p class="tb-intro__lede">
-        An independent, syntax-forward English translation of the Greek New Testament by
-        <strong>Timothy Noe</strong>, presented in parallel with the Greek so the structure
-        of each rendering can be examined directly.
-      </p>
+      <div class="tb-intro__desc">
+        <p>
+          The <strong>Terebinth Translation</strong> aims to be a syntax-for-syntax translation,
+          reliably passing the syntax of the Greek through into English whenever possible. It is
+          called &ldquo;Terebinth&rdquo; because it is strategically &ldquo;wooden&rdquo; in form.
+        </p>
+        <p>
+          It is not designed to be read cover-to-cover as the most fluid, idiomatic translation,
+          but to be consulted verse by verse for insight into the underlying syntax&mdash;most
+          valuably by students of Greek, who can more easily see the grammar beneath the English.
+          The translation is thus not meant to be a source of &ldquo;meaning&rdquo; but a
+          transmitter of the grammar. &ldquo;Helper&rdquo; words not present in the Greek (itself
+          often a difficult distinction to make) are included [in brackets].
+        </p>
+        <p>
+          This project is living: this version does not claim to be final, but is the first word
+          in an ongoing conversation and improvement. Any errors are entirely my own. The Greek
+          text is sourced from the SBLGNT for its availability; this is not a claim that it is
+          the most authoritative Greek text.
+        </p>
+        <p class="tb-intro__sig">&mdash; Timothy Noe</p>
+      </div>
+
+      <section class="tb-conv" aria-labelledby="conv-title">
+        <h2 id="conv-title" class="tb-section-title">Translation conventions</h2>
+        <p class="tb-conv__lede">
+          To the extent possible without breaking legibility (admittedly a difficult balance to
+          maintain), grammatical form is preserved in the English. These are the typical
+          renderings; select a part of speech, then a form, to see its pattern.
+        </p>
+        <div class="tb-conv__chart">
+          <details class="tb-conv__group">
+            <summary><span class="tb-conv__name">Participles</span><span class="tb-conv__hint">3 tenses</span></summary>
+            <div class="tb-conv__body">
+            <details class="tb-conv__sub">
+              <summary>Present</summary>
+              <p class="tb-conv__ex"><span class="tb-conv__pattern">&ldquo;verbing&rdquo;</span></p>
+            </details>
+            <details class="tb-conv__sub">
+              <summary>Aorist</summary>
+              <p class="tb-conv__ex"><span class="tb-conv__pattern">&ldquo;having verbed&rdquo;</span></p>
+            </details>
+            <details class="tb-conv__sub">
+              <summary>Perfect</summary>
+              <p class="tb-conv__ex"><span class="tb-conv__pattern">&ldquo;having had verbed&rdquo;</span></p>
+            </details>
+            </div>
+          </details>
+          <details class="tb-conv__group">
+            <summary><span class="tb-conv__name">Infinitives</span><span class="tb-conv__hint">4 tenses</span></summary>
+            <div class="tb-conv__body">
+            <details class="tb-conv__sub">
+              <summary>Present</summary>
+              <p class="tb-conv__ex"><span class="tb-conv__pattern">&ldquo;to verb&rdquo;</span></p>
+            </details>
+            <details class="tb-conv__sub">
+              <summary>Aorist</summary>
+              <p class="tb-conv__ex"><span class="tb-conv__pattern">&ldquo;to have verbed&rdquo;</span></p>
+            </details>
+            <details class="tb-conv__sub">
+              <summary>Perfect</summary>
+              <p class="tb-conv__ex"><span class="tb-conv__pattern">&ldquo;to have had verbed&rdquo;</span></p>
+            </details>
+            <details class="tb-conv__sub">
+              <summary>Future</summary>
+              <p class="tb-conv__ex"><span class="tb-conv__pattern">&ldquo;going to verb&rdquo;</span></p>
+            </details>
+            </div>
+          </details>
+          <details class="tb-conv__group">
+            <summary><span class="tb-conv__name">Articular infinitives</span><span class="tb-conv__hint">gerund-like</span></summary>
+            <div class="tb-conv__body">
+            <details class="tb-conv__sub">
+              <summary>Articular infinitive</summary>
+              <p class="tb-conv__ex"><span class="tb-conv__pattern">&ldquo;verbing&rdquo;</span><span class="tb-conv__note">A notable example: <span class="tb-conv__grc" lang="grc">εἰς τὸ εἶναι</span> &rarr; &ldquo;for the [purpose of] &hellip; being&rdquo; (e.g. Rom 1:20).</span></p>
+            </details>
+            </div>
+          </details>
+          <details class="tb-conv__group">
+            <summary><span class="tb-conv__name">Finite verbs</span><span class="tb-conv__hint">6 tenses</span></summary>
+            <div class="tb-conv__body">
+            <details class="tb-conv__sub">
+              <summary>Present</summary>
+              <p class="tb-conv__ex"><span class="tb-conv__pattern">&ldquo;[he] verbs&rdquo;</span></p>
+            </details>
+            <details class="tb-conv__sub">
+              <summary>Aorist</summary>
+              <p class="tb-conv__ex"><span class="tb-conv__pattern">&ldquo;[she] verbed&rdquo;</span></p>
+            </details>
+            <details class="tb-conv__sub">
+              <summary>Perfect</summary>
+              <p class="tb-conv__ex"><span class="tb-conv__pattern">&ldquo;[he] has verbed&rdquo;</span></p>
+            </details>
+            <details class="tb-conv__sub">
+              <summary>Pluperfect</summary>
+              <p class="tb-conv__ex"><span class="tb-conv__pattern">&ldquo;[she] had verbed&rdquo;</span></p>
+            </details>
+            <details class="tb-conv__sub">
+              <summary>Imperfect</summary>
+              <p class="tb-conv__ex"><span class="tb-conv__pattern">&ldquo;[he] was verbing&rdquo;</span></p>
+            </details>
+            <details class="tb-conv__sub">
+              <summary>Future</summary>
+              <p class="tb-conv__ex"><span class="tb-conv__pattern">&ldquo;[she] will verb&rdquo;</span></p>
+            </details>
+            </div>
+          </details>
+          <details class="tb-conv__group">
+            <summary><span class="tb-conv__name">Nouns</span><span class="tb-conv__hint">cases</span></summary>
+            <div class="tb-conv__body">
+            <details class="tb-conv__sub">
+              <summary>Dative</summary>
+              <p class="tb-conv__ex"><span class="tb-conv__pattern">&ldquo;to him&rdquo;</span></p>
+            </details>
+            <details class="tb-conv__sub">
+              <summary>Genitive</summary>
+              <p class="tb-conv__ex"><span class="tb-conv__pattern">&ldquo;of her&rdquo;</span></p>
+            </details>
+            </div>
+          </details>
+          <details class="tb-conv__group">
+            <summary><span class="tb-conv__name">Prepositions</span><span class="tb-conv__hint">5 listed</span></summary>
+            <div class="tb-conv__body">
+            <details class="tb-conv__sub">
+              <summary><span class="tb-conv__grc" lang="grc">ἐν</span></summary>
+              <p class="tb-conv__ex"><span class="tb-conv__pattern">&ldquo;in&rdquo;</span></p>
+            </details>
+            <details class="tb-conv__sub">
+              <summary><span class="tb-conv__grc" lang="grc">εἰς</span></summary>
+              <p class="tb-conv__ex"><span class="tb-conv__pattern">&ldquo;into; for&rdquo;</span></p>
+            </details>
+            <details class="tb-conv__sub">
+              <summary><span class="tb-conv__grc" lang="grc">πρός</span></summary>
+              <p class="tb-conv__ex"><span class="tb-conv__pattern">&ldquo;towards&rdquo;</span></p>
+            </details>
+            <details class="tb-conv__sub">
+              <summary><span class="tb-conv__grc" lang="grc">ὑπό</span></summary>
+              <p class="tb-conv__ex"><span class="tb-conv__pattern">&ldquo;under; by&rdquo;</span></p>
+            </details>
+            <details class="tb-conv__sub">
+              <summary><span class="tb-conv__grc" lang="grc">κατά</span></summary>
+              <p class="tb-conv__ex"><span class="tb-conv__pattern">&ldquo;according to; down&rdquo;</span><span class="tb-conv__note">with the accusative; &ldquo;against&rdquo; with the genitive.</span></p>
+            </details>
+            </div>
+          </details>
+          <details class="tb-conv__group">
+            <summary><span class="tb-conv__name">Key particles</span><span class="tb-conv__hint">3 listed</span></summary>
+            <div class="tb-conv__body">
+            <details class="tb-conv__sub">
+              <summary><span class="tb-conv__grc" lang="grc">δέ</span></summary>
+              <p class="tb-conv__ex"><span class="tb-conv__pattern">&ldquo;but&rdquo;</span></p>
+            </details>
+            <details class="tb-conv__sub">
+              <summary><span class="tb-conv__grc" lang="grc">καί</span></summary>
+              <p class="tb-conv__ex"><span class="tb-conv__pattern">&ldquo;and; also; even&rdquo;</span></p>
+            </details>
+            <details class="tb-conv__sub">
+              <summary><span class="tb-conv__grc" lang="grc">τε</span></summary>
+              <p class="tb-conv__ex"><span class="tb-conv__pattern">&ldquo;and; also; both&rdquo;</span></p>
+            </details>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <h2 class="tb-section-title">Read the translation</h2>
       <p class="tb-intro__note" id="intro-meta"></p>
       <div class="tb-book-grid" id="book-grid"></div>
       <details class="tb-about">
-        <summary>About this translation</summary>
+        <summary>About this reader</summary>
         <p>
-          The Terebinth Translation (TB) seeks to convey the underlying Greek syntax in
-          English for New Testament scholars and students of biblical Greek. Each verse is
-          shown beside its Greek source text; hovering or tapping a Greek word reveals its
-          lemma and part of speech.
+          Each verse is shown beside its Greek source text; hovering or tapping a Greek word
+          reveals its lemma and part of speech.
         </p>
         <p>
           The text is maintained at <a href="https://ancientlibrary.org" rel="noopener">AncientLibrary.org</a>,
           which is the authoritative source; this reader mirrors a dated snapshot so it loads
-          quickly and reliably. The Greek is the SBLGNT (Society of Biblical Literature Greek
-          New Testament).
+          quickly and reliably.
         </p>
       </details>
     </section>

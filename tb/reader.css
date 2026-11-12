@@ -114,6 +114,32 @@ a:hover { text-decoration: underline; }
 .tb-book__name { font-weight: 600; display: block; }
 .tb-book__greek { font-family: var(--greek-font); color: var(--muted); font-size: 0.92rem; }
 
+.tb-intro__desc { max-width: 72ch; font-size: 1.05rem; }
+.tb-intro__desc p { margin: 0 0 14px; }
+.tb-intro__sig { color: var(--ink-soft); font-style: italic; }
+.tb-section-title { font-size: 1.25rem; margin: 34px 0 8px; padding-top: 22px; border-top: 1px solid var(--line); }
+
+/* Conventions chart: nested, expandable */
+.tb-conv__lede { color: var(--ink-soft); max-width: 72ch; margin: 0 0 14px; }
+.tb-conv__chart { border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; max-width: 72ch; }
+.tb-conv__group + .tb-conv__group { border-top: 1px solid var(--line); }
+.tb-conv summary { cursor: pointer; list-style: none; display: flex; align-items: center; gap: 10px; }
+.tb-conv summary::-webkit-details-marker { display: none; }
+.tb-conv summary::before { content: "+"; width: 1em; text-align: center; color: var(--accent); font-weight: 700; }
+.tb-conv details[open] > summary::before { content: "\2212"; }
+.tb-conv summary:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
+.tb-conv__group > summary { padding: 12px 16px; font-weight: 600; }
+.tb-conv__group > summary:hover, .tb-conv__group[open] > summary { background: var(--bg-alt); }
+.tb-conv__hint { margin-left: auto; font-weight: 400; font-size: 0.8rem; color: var(--muted); }
+.tb-conv__body { padding: 4px 16px 10px 42px; border-top: 1px solid var(--line); }
+.tb-conv__sub + .tb-conv__sub { border-top: 1px dashed var(--line); }
+.tb-conv__sub > summary { padding: 8px 0; color: var(--ink-soft); }
+.tb-conv__sub > summary:hover { color: var(--accent); }
+.tb-conv__ex { margin: 0 0 10px 1.6em; }
+.tb-conv__pattern { font-family: Georgia, "Times New Roman", serif; font-size: 1.08rem; color: var(--accent-dark); }
+.tb-conv__note { display: block; font-size: 0.9rem; color: var(--ink-soft); margin-top: 2px; }
+.tb-conv__grc { font-family: var(--greek-font); font-size: 1.1em; color: var(--greek); }
+
 .tb-about { margin-top: 18px; border-top: 1px solid var(--line); padding-top: 14px; }
 .tb-about summary { cursor: pointer; font-weight: 600; color: var(--accent); }
 .tb-about p { color: var(--ink-soft); max-width: 72ch; }
