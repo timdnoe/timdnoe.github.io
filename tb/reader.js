@@ -162,6 +162,15 @@
 
   function populateChapters(book, current) {
     els.chapterSelect.innerHTML = "";
+    if (!current) {
+      // Landing page: no chapter is open, so lead with a placeholder. Without
+      // it chapter 1 would be preselected and picking it would fire no change.
+      var blank = document.createElement("option");
+      blank.value = "";
+      blank.textContent = "–";
+      blank.selected = true;
+      els.chapterSelect.appendChild(blank);
+    }
     for (var c = 1; c <= book.chapters; c++) {
       var opt = document.createElement("option");
       opt.value = c;
@@ -250,7 +259,13 @@
   // ------------------------------ router -----------------------------
   function route() {
     var loc = parseHash();
-    if (!loc) { hide(els.reader); show(els.intro); status(null); return; }
+    if (!loc) {
+      hide(els.reader); show(els.intro); status(null);
+      // No chapter rendered yet, so fill the chapter list for the selected book.
+      var sel = bookById[els.bookSelect.value];
+      if (sel) populateChapters(sel, null);
+      return;
+    }
     loadChapter(loc.book, loc.chapter);
   }
 
@@ -273,7 +288,9 @@
       buildBookGrid();
 
       els.bookSelect.onchange = function () { go(this.value, 1); };
-      els.chapterSelect.onchange = function () { go(els.bookSelect.value, this.value); };
+      els.chapterSelect.onchange = function () {
+        if (this.value) go(els.bookSelect.value, this.value);
+      };
 
       // default view state
       document.body.classList.add("show-greek", "morph-on");
